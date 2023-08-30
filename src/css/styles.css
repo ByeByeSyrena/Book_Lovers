@@ -1,0 +1,19 @@
+@import url('./reset.css');
+@import url('./scroll-up.css');
+@import url('./header.css');
+@import url('./home.css');
+@import url('./menu.css');
+@import url('./shopping-list.css');
+@import url('./remove-book-modal.css');
+@import url('./add-book-modal.css');
+@import url('./authorization-page.css');
+
+:root {
+  --black-color: #000000;
+  --dark-theme-color: #111111;
+  --dark-gray-color: #202024;
+  --white-color: #ffffff;
+  --violet-color: #4f2ee8;
+  --yellow-color: #eac645;
+  --logo-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+}
