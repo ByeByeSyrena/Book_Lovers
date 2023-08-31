@@ -23,8 +23,8 @@
   --font: 'DM Sans', sans-serif;
   --violet-gray-gradient: #4f2ee8, #686868;
   --transparent-black: rgba(0, 0, 0, 0.6);
-  --white-bookshelf: #F3F3F3;
-  --low-white-text:rgba(255, 255, 255, 0.6);
+  --white-bookshelf: #f3f3f3;
+  --low-white-text: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -36,6 +36,13 @@ body {
   max-width: 375px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 335px) {
+  .container {
+    max-width: 335px;
+    padding: 0 15px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
