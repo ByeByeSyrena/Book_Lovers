@@ -1,0 +1,23 @@
+.dark .header-main-div{
+    background: var(--dark-theme-color);
+    border-color: var(--white-color);
+}
+.dark main{
+    background: var(--dark-gray-color);
+}
+.dark .item-categories{
+    color: var(--dark-theme-color);
+}
+.dark .item-categories{
+    color: var(--low-white-text);
+}
+.dark .header-logo svg{
+    fill: var(--white-bookshelf);
+}
+.dark .span-to-shopping-page{
+    color: var(--white-color);
+}
+.dark .basket svg{
+    fill: var(--white-color);
+}
+
