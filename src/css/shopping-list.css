@@ -108,3 +108,24 @@
 }
 
 
+.tui-page-btn{
+  border-radius: 50%;
+  border: 1px solid var(--dark-theme-color);
+}
+.tui-first{
+  background: var(--dark-theme-color);
+}
+.tui-last{
+  background: var(--yellow-color);
+}
+.tui-page-with-margin{
+  margin: 0 5px;
+}
+/* .tui-next .tui-ico-next,
+.tui-last .tui-ico-last {
+  color: black;
+}
+.tui-prev .tui-ico-prev,
+.tui-first .tui-ico-first {
+  color: white; 
+} */

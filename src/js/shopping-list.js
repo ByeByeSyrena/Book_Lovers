@@ -9,9 +9,9 @@ const pagination = new Pagination(container, {
     visiblePages: 3,
     centerAlign: true,
     template: {
-      page: '<a href="#" class="tui-page-btn">{{page}}</a>',
+      page: '<a href="#" class="tui-page-btn tui-page-with-margin">{{page}}</a>',
       currentPage:
-        '<strong class="tui-page-btn tui-is-selected">{{page}}</strong>',
+        '<strong class="tui-page-btn tui-is-selected tui-page-with-margin">{{page}}</strong>',
       moveButton:
         '<a href="#" class="tui-page-btn tui-{{type}}">' +
         '<span class="tui-ico-{{type}}">{{type}}</span>' +
