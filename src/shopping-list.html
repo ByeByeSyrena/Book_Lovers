@@ -1,77 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Raleway:ital,wght@0,800;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
 
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/public/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Store</title>
-  </head>
-  <body>
-    <include src="./partials/header.html"></include>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Raleway:ital,wght@0,800;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
 
-    <main>
-      <div class="shopping__list">
-        <h2 class="shopping__list__first__title">
-          Shopping <span class="shopping__list__second__title">List</span>
-        </h2>
-        <ul class="shopping__list__list">
-          <li class="shopping__list__item">
-            <button type="button" class="shopping__list__btn__close">X</button>
-            <img
-              class="shopping__list__book__image"
-              src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png"
-              alt="book images"
-            />
-            <div class="shopping__list__box__description">
-              <h3 class="shopping__list__book__title">Book title</h3>
-              <p class="shopping__list__category">categorya</p>
-              <p class="shopping__list__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Provident ducimus sunt nostrum esse enim obcaecati cupiditate
-                est veniam assumenda neque ea aut quam facilis deserunt
-                laboriosam incidunt nemo, alias ex.
-              </p>
-              <p class="shopping__list__author">book author</p>
-            </div>
-            <ul class="shopping__list__link__list">
-              <li class="shopping__list__link__item">
-                <a href=""
-                  ><img
-                    class="shopping__list__link__images"
-                    src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png"
-                    alt=""
-                /></a>
-              </li>
-              <li class="shopping__list__link__item">
-                <a href=""
-                  ><img
-                    class="shopping__list__link__images"
-                    src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png"
-                    alt=""
-                /></a>
-              </li>
-              <li class="shopping__list__link__item">
-                <a href=""
-                  ><img
-                    class="shopping__list__link__images"
-                    src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png"
-                    alt=""
-                /></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </main>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/src/public/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Store</title>
+</head>
 
-    <!-- <script type="module" src="./main.js"></script> -->
-  </body>
+<body>
+  <include src="./partials/header.html"></include>
+
+  <main>
+    <div class="shopping__list">
+      <h2 class="shopping__list__first__title">
+        Shopping <span class="shopping__list__second__title">List</span>
+      </h2>
+      <ul class="shopping__list__list">
+        <li class="shopping__list__item">
+          <button type="button" class="shopping__list__btn__close">X</button>
+          <img class="shopping__list__book__image"
+            src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png" alt="book images" />
+          <div class="shopping__list__box__description">
+            <h3 class="shopping__list__book__title">Book title</h3>
+            <p class="shopping__list__category">categorya</p>
+            <p class="shopping__list__description">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Provident ducimus sunt nostrum esse enim obcaecati cupiditate
+              est veniam assumenda neque ea aut quam facilis deserunt
+              laboriosam incidunt nemo, alias ex.
+            </p>
+            <p class="shopping__list__author">book author</p>
+          </div>
+          <ul class="shopping__list__link__list">
+            <li class="shopping__list__link__item">
+              <a href=""><img class="shopping__list__link__images"
+                  src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png" alt="" /></a>
+            </li>
+            <li class="shopping__list__link__item">
+              <a href=""><img class="shopping__list__link__images"
+                  src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png" alt="" /></a>
+            </li>
+            <li class="shopping__list__link__item">
+              <a href=""><img class="shopping__list__link__images"
+                  src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png" alt="" /></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div id="tui-pagination-container"></div>
+    </div>
+  </main>
+  <script type="module" src="./js/shopping-list.js"></script>
+  <!-- <script type="module" src="./main.js"></script> -->
+</body>
+
 </html>
