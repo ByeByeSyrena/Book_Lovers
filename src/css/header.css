@@ -1,0 +1,122 @@
+.header-main-div {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 72px;
+  min-width: 335px;
+  padding: 22px 0;
+  align-items: center;
+  border-radius: 0px 0px 8px 8px;
+  border: 1.5px solid var(--dark-theme-color);
+}
+
+.header-part-div {
+  display: flex;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 40px;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+}
+
+.li-to-home-page {
+  margin-right: 24px;
+}
+
+.li-to-shopping-page {
+  margin-right: 4px;
+}
+
+.span-to-shopping-page {
+  color: var(--black-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 27px;
+
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+}
+
+.home-span-btn {
+  display: flex;
+  color: var(--black-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 36px;
+  background: var(--yellow-color);
+}
+
+.li-to-shopping-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, var(--violet-white-gradient));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  background: var(--white-color);
+
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 1px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
