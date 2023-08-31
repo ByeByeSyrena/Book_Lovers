@@ -23,6 +23,8 @@
   --font: 'DM Sans', sans-serif;
   --violet-gray-gradient: #4f2ee8, #686868;
   --transparent-black: rgba(0, 0, 0, 0.6);
+  --white-bookshelf: #F3F3F3;
+  --low-white-text:rgba(255, 255, 255, 0.6);
 }
 
 body {
