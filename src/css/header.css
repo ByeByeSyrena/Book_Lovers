@@ -1,3 +1,32 @@
+.header-main-div {
+  display: flex;
+  min-height: 64px;
+  padding: 18px 20px;
+}
+
+.header-logo {
+  display: flex;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.home-span-btn {
+  display: flex;
+  color: var(--black-color);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 36px;
+  background: var(--yellow-color);
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -21,28 +50,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background: linear-gradient(to bottom, var(--violet-white-gradient));
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .slider:before {
   position: absolute;
+  background: var(--white-color);
+
   content: '';
   height: 18px;
   width: 18px;
   left: 2px;
   bottom: 1px;
-  background: #2196f3;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
