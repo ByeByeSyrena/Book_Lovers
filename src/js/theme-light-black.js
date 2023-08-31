@@ -1,4 +1,4 @@
-const themeSelector = document.querySelector('.toggle'); //клас перемикача в хедері
+const themeSelector = document.querySelector('.toggle');
 themeSelector.addEventListener('click', onChangeColor);
 
 function onChangeColor(event) {
