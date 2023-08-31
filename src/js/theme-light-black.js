@@ -24,3 +24,4 @@ function onChangeColor(event) {
       }
       
       addDarkClassToHTML();
+
