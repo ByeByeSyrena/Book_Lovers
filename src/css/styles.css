@@ -6,7 +6,7 @@
 @import url('./shopping-list.css');
 @import url('./add-book-modal.css');
 @import url('./theme-light.css');
-@import url('./theme-black.scc');
+@import url('./theme-black.css');
 
 :root {
   --black-color: #000000;
@@ -16,6 +16,11 @@
   --violet-color: #4f2ee8;
   --yellow-color: #eac645;
   --logo-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.15);
+  --light-gray-color: #b4afaf;
+  --almost-white-color: #f6f6f6;
+  --transparent-violet: rgba(79, 46, 232, 0.4);
+  --violet-white-gradient: #4f2ee8, #dcdcdc;
+  --white-to-almost-white-gradient: #ffffff, #f7f7f7;
 }
 
 body {
