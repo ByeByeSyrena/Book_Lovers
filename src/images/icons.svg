@@ -51,5 +51,13 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M22.667 24h-18.667"></path>
 </symbol>
 
+ <symbol id="icon-logo-header" viewBox="0 0 32 32">
+      <path fill="#f6f6f6" d="m0 0 16.343 16.171L32 32V0H0z" style="fill:var(--color1, #f6f6f6)"/>
+      <path fill="#f6f6f6" d="M4.457 4.229 16.4 16.058l11.257 11.486h-23.2V4.23z" style="fill:var(--color1, #f6f6f6)"/>
+      <path fill="#4f2ee8" d="M27.733 27.618 15.79 15.789 4.533 4.303h23.2v23.314z" style="fill:var(--color2, #4f2ee8)"/>
+      <path fill="#4f2ee8" d="m9.257 9.029 13.6 13.6h-13.6v-13.6z" style="fill:var(--color2, #4f2ee8)"/>
+      <path fill="#f6f6f6" d="m9.257 9.029 13.6 13.6v-13.6h-13.6z" style="fill:var(--color1, #f6f6f6)"/>
+    </symbol>
+
 </defs>
 </svg>

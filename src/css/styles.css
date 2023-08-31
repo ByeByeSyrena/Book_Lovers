@@ -5,8 +5,7 @@
 @import url('./menu.css');
 @import url('./shopping-list.css');
 @import url('./add-book-modal.css');
-@import url('./theme-light.css');
-@import url('./theme-black.css');
+@import url('./theme-light-black.css');
 
 :root {
   --black-color: #000000;
@@ -22,6 +21,7 @@
   --violet-white-gradient: #4f2ee8, #dcdcdc;
   --white-to-almost-white-gradient: #ffffff, #f7f7f7;
   --font: 'DM Sans', sans-serif;
+  --violet-gray-gradient: #4f2ee8, #686868;
 }
 
 body {
