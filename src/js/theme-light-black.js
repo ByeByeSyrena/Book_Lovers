@@ -1,5 +1,5 @@
 const themeSelector = document.querySelector('.toggle'); //клас перемикача в хедері
-themeSelector.addEventListener('click', onChangeColor);
+// themeSelector.addEventListener('click', onChangeColor);
 
 function onChangeColor(event) {
         event.preventDefault();

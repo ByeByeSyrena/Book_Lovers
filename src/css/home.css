@@ -4,3 +4,15 @@
   line-height: 18px; /* 112.5% */
   letter-spacing: -0.32px;
 }
+.main-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.categories-list {
+  height: 150px;
+  overflow: auto;
+}
+.book-categories {
+  border: 1px solid black;
+}
