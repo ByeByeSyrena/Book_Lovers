@@ -10,18 +10,17 @@
     <link rel="stylesheet" href="./css/styles.css" />
 
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/public/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Store</title>
   </head>
   <body>
-    <load src="partials/header.html" />
+    <include src="./partials/header.html"></include>
     <main>
-      <load src="partials/home.html" />
+      <include src="./partials/home.html"></include>
     </main>
-    <load src="partials/authorization-page.html" />
-    <load src="partials/menu.html" />
-    <load src="partials/add-book-modal.html" />
+    <include src="./partials/menu.html"></include>
+    <include src="./partials/add-book-modal.html"></include>
 
     <script type="module" src="./main.js"></script>
   </body>

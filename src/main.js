@@ -1,5 +1,4 @@
 import './js/add-book-modal';
-import './js/authorization-page';
 import './js/header';
 import './js/home';
 import './js/menu';
