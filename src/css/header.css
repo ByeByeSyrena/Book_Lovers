@@ -1,15 +1,46 @@
 .header-main-div {
   display: flex;
-  min-height: 64px;
-  padding: 18px 20px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 72px;
+  padding: 22px 0;
+  align-items: center;
+  border-radius: 0px 0px 8px 8px;
+  border: 1.5px solid var(--dark-theme-color);
+}
+
+.header-part-div {
+  display: flex;
 }
 
 .header-logo {
   display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 40px;
 }
 
 .navigation-list {
   display: flex;
+  align-items: center;
+}
+
+.li-to-home-page {
+  margin-right: 24px;
+}
+
+.li-to-shopping-page {
+  margin-right: 4px;
+}
+
+.span-to-shopping-page {
+  color: var(--black-color);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 27px;
+
+  letter-spacing: -0.56px;
+  text-transform: uppercase;
 }
 
 .home-span-btn {
@@ -25,6 +56,12 @@
   gap: 10px;
   border-radius: 36px;
   background: var(--yellow-color);
+}
+
+.li-to-shopping-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 /* The switch - the box around the slider */
