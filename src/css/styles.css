@@ -6,7 +6,7 @@
 @import url('./shopping-list.css');
 @import url('./add-book-modal.css');
 @import url('./theme-light.css');
-@import url('./theme-black.scc');
+@import url('./theme-black.css');
 
 :root {
   --black-color: #000000;
