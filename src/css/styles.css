@@ -21,11 +21,12 @@
   --transparent-violet: rgba(79, 46, 232, 0.4);
   --violet-white-gradient: #4f2ee8, #dcdcdc;
   --white-to-almost-white-gradient: #ffffff, #f7f7f7;
+  --font: 'DM Sans', sans-serif;
 }
 
 body {
-  background-color: var(--white-color);
-  font-family: 'DM Sans', sans-serif;
+  background-color: var(--almost-white-color);
+  font-family: var(--font);
 }
 
 .container {
