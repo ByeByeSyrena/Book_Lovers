@@ -1,60 +1,106 @@
-// const arraTest = [
-    //     {
-//         id: '1122334',
-//         img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//         alt: 'book images',
-//         title: 'Book title',
-//         category: 'categorya',
-//         description:
-//           'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//         author: 'book author',
-//       },
-//       {
-//         id: '1122333',
-//         img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//         alt: 'book images',
-//         title: 'Book title',
-//         category: 'categorya',
-//         description:
-//           'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//         author: 'book author',
-//       },
-//       {
-//         id: '1122332',
-//         img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//         alt: 'book images',
-//         title: 'Book title',
-//         category: 'categorya',
-//         description:
-//           'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//         author: 'book author',
-//       },
-//       {
-//         id: '1122331',
-//         img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//         alt: 'book images',
-//         title: 'Book title',
-//         category: 'categorya',
-//         description:
-//           'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//         author: 'book author',
-//       },
-// ]
-
-// localStorage.setItem(BOOKS_CARDS, JSON.stringify(arraTest))
-
-
-
 const BOOKS_CARDS = 'bookCards';
+
+const arraTest = [
+        {
+        id: '1122334',
+        img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+        alt: 'book images',
+        title: 'Book title',
+        category: 'categorya',
+        description:
+          'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+        author: 'book author',
+      },
+      {
+        id: '1122333',
+        img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+        alt: 'book images',
+        title: 'Book title',
+        category: 'categorya',
+        description:
+          'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+        author: 'book author',
+      },
+      {
+        id: '1122332',
+        img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+        alt: 'book images',
+        title: 'Book title',
+        category: 'categorya',
+        description:
+          'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+        author: 'book author',
+      },
+      {
+        id: '1122331',
+        img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+        alt: 'book images',
+        title: 'Book title',
+        category: 'categorya',
+        description:
+          'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+        author: 'book author',
+      },
+      {
+        id: '1123411',
+        img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+        alt: 'book images',
+        title: 'Book title',
+        category: 'categorya',
+        description:
+          'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+        author: 'book author',
+      },
+      {
+        id: '23412351234',
+        img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+        alt: 'book images',
+        title: 'Book title',
+        category: 'categorya',
+        description:
+          'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+        author: 'book author',
+      },
+      {
+        id: '1324234',
+        img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+        alt: 'book images',
+        title: 'Book title',
+        category: 'categorya',
+        description:
+          'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+        author: 'book author',
+      },
+      {
+        id: '1123412341',
+        img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+        alt: 'book images',
+        title: 'Book title',
+        category: 'categorya',
+        description:
+          'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+        author: 'book author',
+      },
+]
+
+localStorage.setItem(BOOKS_CARDS, JSON.stringify(arraTest))
+
+
+
 let bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS));
 
-const listMarkup = document.querySelector('.js-markup');
+const listMarkup = document.querySelector('.js-markup-shopping__list');
 const placeholder = document.querySelector('.js-placeholder');
 listMarkup.addEventListener('click', deleteCard);
 
 setMarkup(bookArray);
 
 function deleteCard(evt) {
+    evt.preventDefault();
+    if(!evt.target.id){
+        return
+    }
+    
     const bookIdDelete = evt.target.id;
     const newArray = bookArray.filter(book => book.id !== bookIdDelete);
  
