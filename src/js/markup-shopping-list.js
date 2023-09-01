@@ -1,27 +1,85 @@
+// const arraTest = [
+    //     {
+//         id: '1122334',
+//         img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+//         alt: 'book images',
+//         title: 'Book title',
+//         category: 'categorya',
+//         description:
+//           'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+//         author: 'book author',
+//       },
+//       {
+//         id: '1122333',
+//         img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+//         alt: 'book images',
+//         title: 'Book title',
+//         category: 'categorya',
+//         description:
+//           'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+//         author: 'book author',
+//       },
+//       {
+//         id: '1122332',
+//         img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+//         alt: 'book images',
+//         title: 'Book title',
+//         category: 'categorya',
+//         description:
+//           'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+//         author: 'book author',
+//       },
+//       {
+//         id: '1122331',
+//         img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+//         alt: 'book images',
+//         title: 'Book title',
+//         category: 'categorya',
+//         description:
+//           'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+//         author: 'book author',
+//       },
+// ]
+
+// localStorage.setItem(BOOKS_CARDS, JSON.stringify(arraTest))
+
+
+
 const BOOKS_CARDS = 'bookCards';
-const bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS)) ?? [];
+let bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS));
 
-const listMarkup = document.querySelector('.js-markup')
-const btnClick = document.querySelector('.js-btn-click');
-const placeholder = document.querySelector('js-placeholder')
+const listMarkup = document.querySelector('.js-markup');
+const placeholder = document.querySelector('.js-placeholder');
+listMarkup.addEventListener('click', deleteCard);
 
-btnClick.addEventListener('click', deleteCard);
+setMarkup(bookArray);
 
-function deleteCard (evt) {
-  const bookIdDelete = evt.currentTarget.id;
-  console.log(bookIdDelete);
-  bookArray.filter(book => book.id !== bookIdDelete);
-  return localStorage.setItem(BOOKS_CARDS, JSON.stringify(bookArray));
-};
+function deleteCard(evt) {
+    const bookIdDelete = evt.target.id;
+    const newArray = bookArray.filter(book => book.id !== bookIdDelete);
+ 
+    localStorage.setItem(BOOKS_CARDS, JSON.stringify(newArray));
+    bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS))
+  
+    setMarkup(bookArray)
+}
 
-listMarkup.innerHTML = creatMarkup(bookArray);
+function setMarkup(array) {
+    listMarkup.innerHTML = creatMarkup(array);
+  if (array.length) {
+    placeholder.style.display = 'none';
+} else {
+    placeholder.style.display = 'block';
+}
+}
 
 function creatMarkup(books) {
-    console.log(books)
-    return books.reduce((acc, book) => acc + 
-       ` <li class="shopping__list__item">
-        <button type="button" class="shopping__list__btn__delete js-btn-click id="${book.id}">
-          <svg width="34" height="34" class="delete__button">
+  return books.reduce(
+    (acc, book) =>
+      acc +
+      ` <li class="shopping__list__item">
+        <button type="button" class="shopping__list__btn__delete js-btn-click" >
+          <svg width="34" height="34" class="delete__button" id="${book.id}">
             <use href="./images/icons.svg#icon-remove-trash-can"></use>
           </svg>
         </button>
@@ -62,7 +120,8 @@ function creatMarkup(books) {
             /></a>
           </li>
         </ul>
-      </li>`, ""
-    )
-
+      </li>`,
+    ''
+  );
 }
+
