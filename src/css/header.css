@@ -134,6 +134,7 @@ input:checked + .slider:before {
 }
 
 .header-user-part-div {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,12 +148,29 @@ input:checked + .slider:before {
 /* Mobile menu close and open buttons */
 .header-mobile-menu-icons {
   display: flex;
+  width: 28px;
+  width: 28px;
   justify-content: center;
   align-items: center;
 }
 
-.burger-menu {
+.header-mobile-menu-icons svg {
   fill: var(--black-color);
+}
+
+.header-mobile-menu-icons svg:hover,
+.header-mobile-menu-icons svg:focus {
+  fill: var(--violet-color);
+}
+
+.burger-menu {
+  position: absolute;
+  right: 0;
+}
+
+.header-cross {
+  position: absolute;
+  right: 0;
 }
 
 /* Logged user element */
