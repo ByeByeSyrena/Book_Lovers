@@ -93,6 +93,10 @@
   align-items: center;
   position: absolute;
 }
+.shopping__list__link__images:hover,
+.shopping__list__link__images:focus {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
 
 .shopping__list__placeholder {
   max-width: 350px;
@@ -119,6 +123,12 @@
 .shopping__list__placeholder__images {
   max-width: 320px;
   max-height: 240px;
+}
+
+.delete__button {
+  background-image: url('../images/shopping-list/trash-03.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 @media screen and (min-width: 320px), screen and (max-width: 560px) {
@@ -170,13 +180,16 @@
   .shopping__list__link__images {
     width: 16px;
   }
-  
+ 
+  .delete__button {
+    width: 28px;
+    height: 28px;
+    background-size: 16px 16px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
- 
   .shopping__list__list {
-   
     margin-left: auto;
     margin-right: auto;
   }
@@ -217,6 +230,12 @@
   .shopping__list__link__images {
     width: 32px;
   }
+
+  .delete__button {
+    min-width: 34px;
+    min-height: 34px;
+    background-size: 18px 18px;
+  }
 }
 
 @media only screen and (min-width: 1180px) {
@@ -224,6 +243,7 @@
     padding-left: 40px;
     padding-right: 24px;
   }
+  
   .shopping__list__list {
     min-width: 996px;
   }
