@@ -1,6 +1,5 @@
-.dark .header-main-div{
-    background: var(--dark-theme-color);
-    border-color: var(--white-color);
+html{
+    background: gray;
 }
 .dark main{
     background: var(--dark-gray-color);
@@ -20,4 +19,11 @@
 .dark .basket svg{
     fill: var(--white-color);
 }
-
+.dark header{
+    background-color: var(--dark-theme-color);
+    border: 1.5px solid var(--white-color);
+    border-radius: 0 0 8px 8px;
+}
+.dark .header-main-div{
+    background-color: var(--dark-theme-color);
+}
