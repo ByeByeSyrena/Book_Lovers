@@ -1,5 +1,6 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
+import "./markup-shopping-list"
 
 const container = document.getElementById('tui-pagination-container')
 
