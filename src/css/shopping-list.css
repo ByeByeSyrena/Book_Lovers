@@ -228,3 +228,140 @@
     min-width: 996px;
   }
 }
+
+
+
+.shopping__list {
+  padding: 40 24 0 40;
+}
+
+.shopping__list__first__title {
+  color: var(--dark-theme-color);
+  font-family: DM Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -1.92px;
+}
+
+.shopping__list__second__title {
+  color: var(--violet-color);
+}
+
+.shopping__list__list {
+  margin-top: 40px;
+}
+
+.shopping__list__item {
+  position: relative;
+  display: flex;
+  max-width: 996px;
+  height: 213px;
+  padding: 24px 24px;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
+
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  background: var(--white-color);
+  box-sizing: border-box;
+}
+
+.shopping__list__book__image {
+  width: 116px;
+  height: 165px;
+  border-radius: 8px;
+}
+
+.shopping__list__btn__close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+.shopping__list__book__title {
+  color: #111;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.shopping__list__category {
+  color: #b4afaf;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.36px;
+  margin-bottom: 14px;
+}
+
+.shopping__list__description {
+  color: var(--dark-theme-color);
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+}
+
+.shopping__list__author {
+  color: #b4afaf;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: -0.48px;
+
+  position: absolute;
+  left: 164px;
+  bottom: 24px;
+}
+
+.shopping__list__link__list {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+}
+
+.shopping__list__link__images {
+  width: 32px;
+}
+
+
+.tui-page-btn{
+  border-radius: 50%;
+  border: 1px solid var(--dark-theme-color);
+}
+.tui-first{
+  background: var(--dark-theme-color);
+}
+.tui-last{
+  background: var(--yellow-color);
+}
+.tui-page-with-margin{
+  margin: 0 10px;
+}
+.tui-prev-is-ellip{
+  margin-right: 10px;
+}
+/* .tui-next .tui-ico-next,
+.tui-last .tui-ico-last {
+  color: black;
+}
+.tui-prev .tui-ico-prev,
+.tui-first .tui-ico-first {
+  color: white; 
+} */

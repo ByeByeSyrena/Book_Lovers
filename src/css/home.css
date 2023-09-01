@@ -16,3 +16,10 @@
 .book-categories {
   border: 1px solid black;
 }
+
+.item-category.active {
+  color: red;
+}
+.colored {
+  color: blue;
+}
