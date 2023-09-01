@@ -1,89 +1,89 @@
 const BOOKS_CARDS = 'bookCards';
 
-// const arraTest = [
-//   {
-//     id: '1122334',
-//     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//     alt: 'book images',
-//     title: 'Book title',
-//     category: 'categorya',
-//     description:
-//       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//     author: 'book author',
-//   },
-//   {
-//     id: '1122333',
-//     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//     alt: 'book images',
-//     title: 'Book title',
-//     category: 'categorya',
-//     description:
-//       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//     author: 'book author',
-//   },
-//   {
-//     id: '1122332',
-//     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//     alt: 'book images',
-//     title: 'Book title',
-//     category: 'categorya',
-//     description:
-//       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//     author: 'book author',
-//   },
-//   {
-//     id: '1122331',
-//     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//     alt: 'book images',
-//     title: 'Book title',
-//     category: 'categorya',
-//     description:
-//       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//     author: 'book author',
-//   },
-//   {
-//     id: '1123411',
-//     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//     alt: 'book images',
-//     title: 'Book title',
-//     category: 'categorya',
-//     description:
-//       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//     author: 'book author',
-//   },
-//   {
-//     id: '23412351234',
-//     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//     alt: 'book images',
-//     title: 'Book title',
-//     category: 'categorya',
-//     description:
-//       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//     author: 'book author',
-//   },
-//   {
-//     id: '1324234',
-//     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//     alt: 'book images',
-//     title: 'Book title',
-//     category: 'categorya',
-//     description:
-//       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//     author: 'book author',
-//   },
-//   {
-//     id: '1123412341',
-//     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-//     alt: 'book images',
-//     title: 'Book title',
-//     category: 'categorya',
-//     description:
-//       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-//     author: 'book author',
-//   },
-// ];
+const arraTest = [
+  {
+    id: '1122334',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '1122333',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '1122332',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '1122331',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '1123411',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '23412351234',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '1324234',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '1123412341',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+];
 
-// localStorage.setItem(BOOKS_CARDS, JSON.stringify(arraTest));
+localStorage.setItem(BOOKS_CARDS, JSON.stringify(arraTest));
 
 let bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS));
 
@@ -120,7 +120,7 @@ function creatMarkup(books) {
   return books.reduce(
     (acc, { id, img, alt, title, category, description, author }) =>
       acc +
-      ` <li class="shopping__list__item ">
+      `<li class="shopping__list__item ">
         <button type="button" class="shopping__list__btn__delete">
         <svg class="delete__button" id="${id}"></svg>
         </button>

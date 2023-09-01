@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+  <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,13 +18,13 @@
     <include src="./partials/header.html"></include>
 
     <main>
-      <div class="shopping__list ">
-        <h2 class="shopping__list__first__title">
-          Shopping <span class="shopping__list__second__title">List</span>
-        </h2>
-        <ul class="shopping__list__list js-markup-shopping__list">
-
-          <!-- <li class="shopping__list__item">
+      <div class="container">
+        <div class="shopping__list">
+          <h2 class="shopping__list__first__title">
+            Shopping <span class="shopping__list__second__title">List</span>
+          </h2>
+          <ul class="shopping__list__list js-markup-shopping__list">
+            <!-- <li class="shopping__list__item">
             <button type="button" class="shopping__list__btn__delete">
               <svg width="34" height="34" class="delete__button">
               </svg>
@@ -72,25 +72,28 @@
               </li>
             </ul>
           </li> -->
-
-        </ul>
-        <div class="shopping__list__placeholder js-placeholder">
-          <p  class="shopping__list__placeholder__descriptions">This page is empty, add some books and proceed to order.</p>
-          <img  class="shopping__list__placeholder__images"
-            srcset="
-              ./images/shopping-list/placeholder/IMG_9606.jpg 1x,
-              ./images/shopping-list/placeholder/IMG_9606@2x.jpg 2x
-            "
-            src="./images/shopping-list/placeholder/IMG_9606.jpg"
-            alt="tablet"
-            width="320"
-            height="240"
-            alt="placeholder"
-          />
+          </ul>
+          <div class="shopping__list__placeholder js-placeholder">
+            <p class="shopping__list__placeholder__descriptions">
+              This page is empty, add some books and proceed to order.
+            </p>
+            <img
+              class="shopping__list__placeholder__images"
+              srcset="
+                ./images/shopping-list/placeholder/IMG_9606.jpg    1x,
+                ./images/shopping-list/placeholder/IMG_9606@2x.jpg 2x
+              "
+              src="./images/shopping-list/placeholder/IMG_9606.jpg"
+              alt="tablet"
+              width="320"
+              height="240"
+              alt="placeholder"
+            />
+          </div>
         </div>
+        <div id="tui-pagination-container"></div>
       </div>
-      <div id="tui-pagination-container"></div>
     </main>
-<script type="module" src="./js/shopping-list.js"></script>
-</body>
+    <script type="module" src="./js/shopping-list.js"></script>
+  </body>
 </html>

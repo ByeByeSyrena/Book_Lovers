@@ -1,11 +1,8 @@
 .shopping__list__first__title {
   color: var(--dark-theme-color);
   font-family: DM Sans;
-  font-size: 48px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -1.92px;
 }
 
 .shopping__list__second__title {
@@ -139,6 +136,13 @@
 }
 
 @media screen and (min-width: 320px), screen and (max-width: 767px) {
+
+  .shopping__list__first__title {
+    font-size: 32px;
+    line-height: 1.19;
+    letter-spacing: -1.28px;
+  }
+
   .shopping__list {
     padding-top: 40px;
   }
@@ -189,6 +193,13 @@
 }
 
 @media only screen and (min-width: 768px) {
+
+  .shopping__list__first__title {
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+  }
+
   .shopping__list__list {
     margin-left: auto;
     margin-right: auto;
