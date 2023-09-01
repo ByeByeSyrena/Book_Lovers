@@ -95,7 +95,7 @@ listMarkup.addEventListener('click', deleteCard);
 
 setMarkup(bookArray);
 
-function deleteCard(evt) {
+export function deleteCard(evt) {
     evt.preventDefault();
     if(!evt.target.id){
         return
@@ -119,7 +119,7 @@ function setMarkup(array) {
 }
 }
 
-function creatMarkup(books) {
+export function creatMarkup(books) {
   return books.reduce(
     (acc, book) =>
       acc +
