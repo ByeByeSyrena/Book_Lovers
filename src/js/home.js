@@ -23,7 +23,7 @@ function onClickCategory(e) {
     const activeLiEl = e.target;
     const nameCategory = activeLiEl.dataset.name;
     listEl.forEach(li => {
-         li.classList.remove("active")
+        li.classList.remove("active")
     })
   
     activeLiEl.classList.add("active")
@@ -32,19 +32,89 @@ function onClickCategory(e) {
             .then(booksData => {
                 booksData.map(book => markupByCategory(book))
             })
-            .catch(erorr => console.log(error))
-        // АННА функція   markupTopBooks створена для побудови html книг по категоріям
+            .catch(error => console.log(error))
         
-        mainTitleEl.innerHTML = nameCategory;
-    
-    } else {
+         } else {
         mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
         getTopBooks()
-        .then(topBooksData => {
-                topBooksData.map(bookTop => markupTopBooks(bookTop))
+            .then(topBooksData => {
+                topBooksData.map(bookTop => markupTopBooks(bookTop));
             })
-            .catch(erorr => console.log(error))
-         // АННА функція   markupTopBooks створена для побудови html ТОП Книг
+            .catch(error => console.log(error)); 
+    
+        
+        // АННА функція   markupTopBooks створена для побудови html книг по категоріям
+        function updateBooksByCategory(nameCategory) {
+            getCategory.getCategory
+              getCategoryData(nameCategory)
+                .then(booksData => {
+                    listEl.forEach(li => li.classList.remove("active"));
 
+                    mainTitleEl.mainTitle;
+                    innerHTML = nameCategory;
+                    booksData.booksData
+                    books.map(book => markupByCategory(book));
+                })
+                .catch(error => console.error(error));
+        }
+           
+             mainTitleEl.innerHTML = nameCategory;
+
+        if (nameCategory) {
+              
+        mainTitleEl.innerHTML = nameCategory;
+        } else {
+            mainTitleEl.mainTitle.innerHTML = 'Best Sellers <span class="colored">Books</span>';
+            getTopBooks()
+                .then(topBooksData => {
+            topBooksData.map(bookTop => markupTopBooks(bookTop));
+        })
+        .catch(error => console.log(error));
+}
+
+    
+   
+        
+        // АННА функція   markupTopBooks створена для побудови html ТОП Книг
+        function updateTopBooks(nameCategory) {
+            getTopBooks()
+                .then(topBooksData => {
+                    listEl.forEach(li => li.classList.remove("active"));
+                    mainTitleEl.mainTitle
+                    innerHTML = 'Best Sellers <span class="colored">Books</span>';
+                    topBooksData.map(bookTop => markupTopBooks(bookTop));
+                })
+                .catch(error => console.error(error));
+ 
+        } 
     }
 }
+
+    function onClickCategory(e) {
+        const activeLiEl = e.target;
+        const nameCategory = activeLiEl.dataset.name;
+        listEl.forEach(li => li.classList.remove("active"));
+        activeLiEl.classList.add("active");
+
+        if (nameCategory) {
+            updateBooksByCategory(nameCategory);
+
+        } else {
+            updateTopBooks(nameCategory);
+        } 
+    }
+
+    getAllCategories()
+        .then(allCategories => {
+            allCategories
+            all.map(categoryName => markupCategoryList(categoryName));
+            listEl = document.querySelectorAll(".item-category");
+        })
+
+    
+    .catch(() => Notify.failure('Sorry, please reload the page'));
+    
+    listCategories.addEventListener("click", onClickCategory); 
+    
+    
+    
