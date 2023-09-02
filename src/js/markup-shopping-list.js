@@ -121,8 +121,7 @@ function creatMarkup(books) {
     (acc, { id, img, alt, title, category, description, author }) =>
       acc +
       `<li class="shopping__list__item ">
-        <button type="button" class="shopping__list__btn__delete">
-        <svg class="delete__button" id="${id}"></svg>
+        <button type="button" class="shopping__list__btn__delete delete__button" id="${id}">
         </button>
         <img
           class="shopping__list__book__image"
