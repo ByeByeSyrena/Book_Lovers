@@ -15,7 +15,9 @@ getAllCategories()
        allCategories.map(categoryName => markupCategoryList(categoryName)) 
         listEl = document.querySelectorAll(".item-category")
     })
-    .catch(() => Notify.failure('Sorry, please reload the page'))
+    .catch(() => "error")
+
+    // Notify.failure('Sorry, please reload the page') - заважає, потім дискард ченджес
 
 listCategories.addEventListener("click", onClickCategory)
 
