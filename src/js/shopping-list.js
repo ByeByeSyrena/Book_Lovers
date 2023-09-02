@@ -2,14 +2,14 @@ import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 import { creatMarkup, deleteCard } from './markup-shopping-list';
 
-document.addEventListener('DOMContentLoaded', function () {
+$(document).ready(function () {
   const BOOKS_CARDS = 'bookCards';
   let bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS) || '[]');
 
   const totalBooks = bookArray.length;
   const perPage = 3;
-  const container = document.getElementById('tui-pagination-container');
-  const pagination = new Pagination(container, {
+  const container = $('#tui-pagination-container');
+  const pagination = new Pagination(container[0], {
     totalItems: totalBooks,
     itemsPerPage: perPage,
     visiblePages: 3,
@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
     },
   });
 
-  const shoppingList = document.querySelector('.shopping__list');
-  const ulList = shoppingList.querySelector('.shopping__list__list');
+  const shoppingList = $('.shopping__list');
+  const ulList = shoppingList.find('.shopping__list__list');
 
   function updateBooksList() {
-    ulList.innerHTML = '';
+    ulList.empty();
 
     const currentPage = pagination.getCurrentPage();
     const startIndex = (currentPage - 1) * perPage;
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const visibleBooks = bookArray.slice(startIndex, endIndex);
     const markup = creatMarkup(visibleBooks);
-    ulList.innerHTML = markup;
+    ulList.html(markup);
   }
 
   updateBooksList();
