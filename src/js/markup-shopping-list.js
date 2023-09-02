@@ -93,18 +93,20 @@ listMarkup.addEventListener('click', deleteCard);
 
 setMarkup(bookArray);
 
-function deleteCard(evt) {
-  evt.preventDefault();
-  if (!evt.target.id) {
-    return;
-  }
-  const bookIdDelete = evt.target.id;
-  const newArray = bookArray.filter(book => book.id !== bookIdDelete);
+export function deleteCard(evt) {
+    evt.preventDefault();
+    if(!evt.target.id){
+        return
+    }
+    
+    const bookIdDelete = evt.target.id;
+    const newArray = bookArray.filter(book => book.id !== bookIdDelete);
+ 
+    localStorage.setItem(BOOKS_CARDS, JSON.stringify(newArray));
+    bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS))
+  
+    setMarkup(bookArray)
 
-  localStorage.setItem(BOOKS_CARDS, JSON.stringify(newArray));
-  bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS));
-
-  setMarkup(bookArray);
 }
 
 function setMarkup(array) {
@@ -116,7 +118,7 @@ function setMarkup(array) {
   }
 }
 
-function creatMarkup(books) {
+export function creatMarkup(books) {
   return books.reduce(
     (acc, { id, img, alt, title, category, description, author }) =>
       acc +
