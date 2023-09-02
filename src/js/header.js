@@ -23,19 +23,28 @@ headerIcons.addEventListener("click", () => {
     };
 });
 
+const mobileMenu = document.getElementById("mobile-menu-container");
 
-window.addEventListener('scroll', () => {
-const allowedScrollPercentage = 10;
+window.addEventListener("scroll", () => {
+  if (menu.contains("mobile-menu-container")) {
+    const scrollY = window.scrollY;
 
-const viewportHeight = window.innerHeight;
-    const allowedScrollPixels = (allowedScrollPercentage / 100) * viewportHeight;
-    
-  const scrollY = window.scrollY;
+    const maxScrollPosition = mobileMenu.offsetTop + mobileMenu.clientHeight;
 
-  if (menu.contains("mobile-menu-container") && scrollY > allowedScrollPixels) {
-    window.scrollTo(0, allowedScrollPixels);
+    if (scrollY >= maxScrollPosition) {
+      
+      mobileMenu.classList.add("allow-scroll");
+    } else {
+      mobileMenu.classList.remove("allow-scroll");
+    }
+  } else {
+    mobileMenu.classList.remove("allow-scroll");
   }
 });
+
+
+
+
 
 
     
