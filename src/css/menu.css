@@ -26,24 +26,24 @@
 
 @media only screen and (max-width: 767px) {
   .mobile-menu-container {
-    display: flex;
-    position: absolute;
-    top: 78px;
+    position: sticky;
+    top: -10px;
     left: 0;
     right: 0;
-    min-width: 335px;
-    min-height: 812px;
-    height: 100%;
-    justify-content: center;
-    color: var(--white-color);
-    overflow: hidden;
+    bottom: 0px;
+    width: 100%;
+    height: 824px;
     background: radial-gradient(
       189.32% 190.93% at 59.76% -23.42%,
       var(--violet-color) 18.03%,
       var(--white-color) 100%
     );
-
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    color: var(--white-color);
+    z-index: 999;
+    pointer-events: initial;
   }
 
   .menu-user-log {
@@ -129,8 +129,8 @@
     position: absolute;
     background-image: url('../images/mobile-menu/mob-menu-bg-pic.png');
     background-position: bottom;
-    background-size: 450px 439px;
-    width: 375px;
+    background-size: 375px 380px;
+    width: 100%;
     height: 100%;
     background-repeat: no-repeat;
   }

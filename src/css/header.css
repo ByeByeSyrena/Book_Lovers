@@ -4,6 +4,9 @@ header {
 
 .header-main-div {
   display: flex;
+  position: relative;
+  top: 0;
+  z-index: 2000;
   justify-content: space-between;
   height: 72px;
   min-width: 335px;
