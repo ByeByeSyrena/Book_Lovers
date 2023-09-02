@@ -1,4 +1,3 @@
-
 h1,
 h2,
 h3,
@@ -248,33 +247,33 @@ gap: 10px */
   gap: 20px;
 }
 .form-link-book-amazon {
-  background-image: url(img/image\ 1.png);
+  /* background-image: url(../images/); */
   width: 62px;
   height: 19px;
 }
 .form-link-book-amazon:hover,
 .form-link-book-amazon:focus {
-  background-image: url(img/amazon-hover.png);
+  /* background-image: url(img/amazon-hover.png); */
 
   /* box-shadow: 0 6px 7px 2px #000000; */
 }
 .form-link-book-ap {
-  background-image: url(img/app-def.png);
+  /* background-image: url(img/app-def.png); */
   width: 33px;
   height: 32px;
 }
 .form-link-book-ap:hover,
 .form-link-book-ap:focus {
-  background-image: url(img/app-hover.png);
+  /* background-image: url(img/app-hover.png); */
 }
 .form-link-book-shop {
-  background-image: url(img/shop-def.png);
+  /* background-image: url(img/shop-def.png); */
   width: 38px;
   height: 36px;
 }
 .form-link-book-shop:hover,
 .form-link-book-shop:focus {
-  background-image: url(img/shop-hover.png);
+  /* background-image: url(img/shop-hover.png); */
 }
 
 .yourorder-modal-submit-btn {
@@ -315,4 +314,3 @@ gap: 10px */
     max-height: 911px;
   }
 } */
-
