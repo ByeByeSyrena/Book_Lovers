@@ -5,10 +5,7 @@
 .dark main{
     background: var(--dark-gray-color);
 }
-.dark .item-categories{
-    color: var(--dark-theme-color);
-}
-.dark .item-categories{
+.dark .item-category{
     color: var(--low-white-text);
 }
 .dark .header-logo svg{
@@ -20,4 +17,6 @@
 .dark .basket svg{
     fill: var(--white-color);
 }
-
+.dark .main-title{
+    color: var(--white-color);
+}
