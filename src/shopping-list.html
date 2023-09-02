@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+  <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
 
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/public/favicon.png" />
+    <link rel="icon" type="image/png" href="public/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Store</title>
   </head>
@@ -18,82 +18,32 @@
     <include src="./partials/header.html"></include>
 
     <main>
-      <div class="shopping__list ">
-        <h2 class="shopping__list__first__title">
-          Shopping <span class="shopping__list__second__title">List</span>
-        </h2>
-        <ul class="shopping__list__list js-markup-shopping__list">
-
-          <!-- <li class="shopping__list__item">
-            <button type="button" class="shopping__list__btn__delete js-btn-click" id="23123">
-              <svg width="34" height="34" class="delete__button ">
-                <use href="./images/icons.svg#icon-remove-trash-can"></use>
-              </svg>
-            </button>
+      <div class="container">
+        <div class="shopping__list">
+          <h2 class="shopping__list__first__title">
+            Shopping <span class="shopping__list__second__title">List</span>
+          </h2>
+          <ul class="shopping__list__list js-markup-shopping__list"></ul>
+          <div class="shopping__list__placeholder js-placeholder">
+            <p class="shopping__list__placeholder__descriptions">
+              This page is empty, add some books and proceed to order.
+            </p>
             <img
-              class="shopping__list__book__image"
-              src="https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png"
-              alt="book images"
+              class="shopping__list__placeholder__images"
+              srcset="
+                ./images/shopping-list/placeholder/IMG_9606.jpg    1x,
+                ./images/shopping-list/placeholder/IMG_9606@2x.jpg 2x
+              "
+              src="./images/shopping-list/placeholder/IMG_9606.jpg"
+              alt="tablet"
+              width="320"
+              height="240"
             />
-            <div class="shopping__list__box__description">
-              <h3 class="shopping__list__book__title">Book title</h3>
-              <p class="shopping__list__category">categorya</p>
-              <p class="shopping__list__description">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit
-                Provident ducimus sunt nostrum esse enim obcaecati cupiditate
-                est veniam assumenda neque ea aut quam facilis deserunt
-                laboriosam incidunt nemo, alias ex
-              </p>
-              <p class="shopping__list__author">book author</p>
-            </div>
-            <ul class="shopping__list__link__list">
-              <li class="shopping__list__link__item">
-                <a href=""
-                  ><img
-                    class="shopping__list__link__images"
-                    src="./images/shopping-list/link_image/image_1.png"
-                    alt="link books"
-                /></a>
-              </li>
-              <li class="shopping__list__link__item">
-                <a href=""
-                  ><img
-                    class="shopping__list__link__images"
-                    src="./images/shopping-list/link_image/image_2.png"
-                    alt="link books"
-                /></a>
-              </li>
-              <li class="shopping__list__link__item">
-                <a href=""
-                  ><img
-                    class="shopping__list__link__images"
-                    src="./images/shopping-list/link_image/image_3.png"
-                    alt="link books"
-                /></a>
-              </li>
-            </ul>
-          </li> -->
-
-        </ul>
-        <div class="shopping__list__placeholder js-placeholder">
-          <p  class="shopping__list__placeholder__descriptions">This page is empty, add some books and proceed to order.</p>
-          <img  class="shopping__list__placeholder__images"
-            srcset="
-              ./images/shopping-list/placeholder/IMG_9606.jpg 1x,
-              ./images/shopping-list/placeholder/IMG_9606@2x.jpg 2x
-            "
-            src="./images/shopping-list/placeholder/IMG_9606.jpg"
-            alt="tablet"
-            width="320"
-            height="240"
-            alt="placeholder"
-          />
+          </div>
         </div>
+        <div id="tui-pagination-container"></div>
       </div>
-      <div id="tui-pagination-container" class="tui-pagination"></div>
     </main>
-<script type="module" src="./js/shopping-list.js"></script>
-
-</body>
-
+    <script type="module" src="./js/shopping-list.js"></script>
+  </body>
 </html>

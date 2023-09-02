@@ -18,6 +18,10 @@ header {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 /* Logo and navigation part */
 
 .header-logo {
@@ -170,7 +174,7 @@ input:checked + .slider:before {
 
 .header-cross {
   position: absolute;
-  right: 0;
+  right: 15px;
 }
 
 /* Logged user element */
