@@ -40,7 +40,7 @@
     height: 100%;
     justify-content: center;
     color: var(--white-color);
-
+    overflow: hidden;
     background: radial-gradient(
       189.32% 190.93% at 59.76% -23.42%,
       var(--violet-color) 18.03%,
@@ -128,13 +128,26 @@
     transform: translate(-50%, -50%);
     gap: 4px;
   }
+
   .background-element {
     position: absolute;
     background-image: url('../images/mobile-menu/mob-menu-bg-pic.png');
     background-position: bottom;
     background-size: 450px 439px;
-    min-width: 375px; /* Set the width */
-    height: 100%; /* Set the height */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
+    width: 375px;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .log-out-button {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    width: 118px;
+    height: 48px;
+    border-radius: 18px;
+    border: 1.5px solid #111;
+    background: #fff;
   }
 }
