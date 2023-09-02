@@ -275,10 +275,7 @@ gap: 10px */
 .form-link-book-shop:focus {
   background-image: url(img/shop-hover.png);
 }
-/* .amazon {
-  width: 62px;
-  height: 19px;
-} */
+
 .yourorder-modal-submit-btn {
   background-color: #ffffff;
   border: 2px solid#000000;
