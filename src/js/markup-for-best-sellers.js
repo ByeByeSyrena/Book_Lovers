@@ -19,6 +19,8 @@ export default function markupTopBooks(arr) {
         )
      .join('');  
 }   
+
+console.log(markupTopBooks); 
             
     // booksContainerEl.innerHTML = '';
     //topBookData.forEach(book => {
