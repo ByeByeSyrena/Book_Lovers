@@ -113,7 +113,9 @@ function setMarkup(array) {
   listMarkup.innerHTML = creatMarkup(array);
   if (array.length) {
     placeholder.style.display = 'none';
+    listMarkup.style.display = 'felx';
   } else {
+    listMarkup.style.display = 'none';
     placeholder.style.display = 'flex';
   }
 }
@@ -140,8 +142,16 @@ export function creatMarkup(books) {
           <li class="shopping__list__link__item">
             <a href=""
               ><img
+                class="shopping__list__link__images amazon"
+                src="${require('../images/shopping-list/link-svg/image1.svg')}"
+                alt="link books amazon"
+            /></a>
+          </li>
+          <li class="shopping__list__link__item">
+            <a href=""
+              ><img
                 class="shopping__list__link__images"
-                src="${require('../images/shopping-list/link_image/image_1.png')}"
+                src="${require('../images/shopping-list/link-svg/image2.svg')}"
                 alt="link books"
             /></a>
           </li>
@@ -149,15 +159,7 @@ export function creatMarkup(books) {
             <a href=""
               ><img
                 class="shopping__list__link__images"
-                src="${require('../images/shopping-list/link_image/image_2.png')}"
-                alt="link books"
-            /></a>
-          </li>
-          <li class="shopping__list__link__item">
-            <a href=""
-              ><img
-                class="shopping__list__link__images"
-                src="${require('../images/shopping-list/link_image/image_3.png')}"
+                src="${require('../images/shopping-list/link-svg/image3.svg')}"
                 alt="link books"
             /></a>
           </li>
