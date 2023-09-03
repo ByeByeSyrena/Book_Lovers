@@ -23,25 +23,6 @@ headerIcons.addEventListener("click", () => {
     };
 });
 
-const mobileMenu = document.getElementById("mobile-menu-container");
-
-window.addEventListener("scroll", () => {
-  if (menu.contains("mobile-menu-container")) {
-    const scrollY = window.scrollY;
-
-    const maxScrollPosition = mobileMenu.offsetTop + mobileMenu.clientHeight;
-
-    if (scrollY >= maxScrollPosition) {
-      
-      mobileMenu.classList.add("allow-scroll");
-    } else {
-      mobileMenu.classList.remove("allow-scroll");
-    }
-  } else {
-    mobileMenu.classList.remove("allow-scroll");
-  }
-});
-
 
 
 
