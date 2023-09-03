@@ -1,9 +1,8 @@
 import axios from 'axios';
-import { baseUrl } from './refs-api';
 
+axios.defaults.baseURL = 'https://books-backend.p.goit.global/books/top-books ';
 export default function getTopBooks() {
-    const url = `${baseUrl}books/top-books`
-    return axios.get(url)
+    return axios.get()
         .then(response => {
             if (response.status !== 200) {
                 throw new Error()

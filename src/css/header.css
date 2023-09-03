@@ -2,23 +2,47 @@ header {
   background-color: var(--almost-white-color);
 }
 
-.header-main-div {
-  display: flex;
-  position: relative;
-  top: 0;
-  z-index: 2000;
-  justify-content: space-between;
-  height: 72px;
-  min-width: 335px;
-  padding: 22px 0;
-  align-items: center;
-  border-radius: 0px 0px 8px 8px;
-  border: 1.5px solid var(--dark-theme-color);
-  background-color: var(--white-color);
+@media only screen and (min-width: 320px) {
+  .header-main-div {
+    width: 320px;
+    display: flex;
+    position: relative;
+    top: 0;
+    z-index: 2000;
+    justify-content: space-between;
+    height: 72px;
+    padding: 22px 0;
+    align-items: center;
+    border-radius: 0px 0px 8px 8px;
+    border: 1.5px solid var(--dark-theme-color);
+    background-color: var(--white-color);
+  }
+
+  @media only screen and (min-width: 320px) {
+    .header-main-div {
+      width: 375px;
+    }
+  }
+
+  .header-part-div {
+    display: flex;
+  }
 }
 
-.header-part-div {
-  display: flex;
+@media only screen and (min-width: 375px) {
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 }
 
 .hidden {
@@ -26,13 +50,6 @@ header {
 }
 
 /* Logo and navigation part */
-
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-right: 40px;
-}
 
 .navigation-list {
   display: none;

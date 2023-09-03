@@ -23,6 +23,11 @@
     display: none;
   }
 }
+@media only screen and (max-width: 320px) {
+  .mobile-menu-container {
+    width: 320px;
+  }
+}
 
 @media only screen and (max-width: 767px) {
   .mobile-menu-container {
@@ -48,7 +53,7 @@
 
   .menu-items-container {
     position: relative;
-    top: 35%;
+    top: 30%;
     left: 0%;
     z-index: 1000;
     display: flex;
