@@ -24,7 +24,7 @@
           <h2 class="shopping__list__first__title">
             Shopping <span class="shopping__list__second__title">List</span>
           </h2>
-          <ul class="shopping__list__list js-markup-shopping__list"></ul>
+          <ul class="shopping__list__list js-markup-shopping__list pagination"></ul>
           <div class="shopping__list__placeholder js-placeholder">
             <p class="shopping__list__placeholder__descriptions">
               This page is empty, add some books and proceed to order.
@@ -42,19 +42,17 @@
             />
           </div>
         </div>
-        <div id="pagination" class="pagination">
+        <div class="pagination">
           <ul class="pagination-list">
-            <li class="page-item first-page disable"><a href="#" class="page-link">First Page</a></li>
-            <li class="page-item prev-page disable"><a href="#" class="page-link">Prev Page</a></li>
+            <li class="page-item first-page disable"><a href="#" class="page-link"><<</a></li>
+            <li class="page-item prev-page disable"><a href="#" class="page-link"><</a></li>
             <span class="numbers">
-              <!-- <li class="page-item dots"><a href="#">...</a></li> -->
               <li class="page-item current-page active"><a href="#" class="page-link">1</a></li>
               <li class="page-item current-page current-page-2"><a href="#" class="page-link">2</a></li>
               <li class="page-item current-page current-page-3"><a href="#" class="page-link">3</a></li>
-              <li class="page-item dots"><a href="#" class="page-link">...</a></li>
             </span>
-            <li class="page-item next-page"><a href="#" class="page-link">Next Page</a></li>
-            <li class="page-item last-page"><a href="#" class="page-link">Last Page</a></li>
+            <li class="page-item next-page"><a href="#" class="page-link">></a></li>
+            <li class="page-item last-page"><a href="#" class="page-link">>></a></li>
           </ul>
         </div>
       </div>
