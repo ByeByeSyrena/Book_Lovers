@@ -12,6 +12,6 @@ export default function markupTopBooks(ArrayOfTopCategories = []) {
         }).join('');
         return booksHTML;
     }).join('');  
-}
+} 
 
          
