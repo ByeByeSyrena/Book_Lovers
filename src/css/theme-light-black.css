@@ -20,3 +20,29 @@
 .dark .main-title{
     color: var(--white-color);
 }
+.dark .categories-list{
+    background-color: var(--dark-gray-color);
+}
+.dark .active {
+   color: var(--yellow-color);
+  }
+.dark .book-title,
+.author,
+.dark .shopping__list__first__title
+{
+    color: var(--white-color);
+}
+.dark .name-category {
+    color: var(--light-gray-color);
+}
+.dark .shopping__list__item{
+    background-color: var(--dark-theme-color);
+}
+.dark .shopping__list__book__title
+{
+color: var(--white-color);
+}
+.dark .shopping__list__description
+{
+color: var(--white-color);
+}

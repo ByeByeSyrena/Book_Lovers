@@ -341,7 +341,7 @@
 .first-page,
 .prev-page,
 .active {
-  background-color: var(--dark-theme-color);
+  /* background-color: var(--dark-theme-color); */
   color: var(--white-color);
 }
 .next-page,
