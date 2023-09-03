@@ -41,10 +41,23 @@
             />
           </div>
         </div>
-        <div id="tui-pagination-container"></div>
+        <div id="pagination" class="pagination">
+          <ul class="pagination-list">
+            <li class="page-item first-page disable"><a href="#" class="page-link">First Page</a></li>
+            <li class="page-item prev-page disable"><a href="#" class="page-link">Prev Page</a></li>
+            <span class="numbers">
+              <!-- <li class="page-item dots"><a href="#">...</a></li> -->
+              <li class="page-item current-page active"><a href="#" class="page-link">1</a></li>
+              <li class="page-item current-page current-page-2"><a href="#" class="page-link">2</a></li>
+              <li class="page-item current-page current-page-3"><a href="#" class="page-link">3</a></li>
+              <li class="page-item dots"><a href="#" class="page-link">...</a></li>
+            </span>
+            <li class="page-item next-page"><a href="#" class="page-link">Next Page</a></li>
+            <li class="page-item last-page"><a href="#" class="page-link">Last Page</a></li>
+          </ul>
+        </div>
       </div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="module" src="./js/shopping-list.js"></script>
   </body>
 </html>
