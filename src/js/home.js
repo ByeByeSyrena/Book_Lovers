@@ -55,5 +55,8 @@ getTopBooks().then(booksData => {
     const bestSellersContainer = document.querySelector(".main-books-container");
     mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
     bestSellersContainer.innerHTML = markupTopBooks(booksData);
-})    
+
+}).catch(error => console.log(error));
+
+
 
