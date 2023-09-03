@@ -303,29 +303,6 @@
 .numbers {
   display: flex;
 }
-
-.first-page::before,
-.prev-page::before,
-.next-page::before,
-.last-page::before {
-  content: '';
-}
-
-.first-page::before {
-  content: '<<';
-}
-
-.prev-page::before {
-  content: '<';
-}
-
-.next-page::before {
-  content: '>';
-}
-
-.last-page::before {
-  content: '>>';
-}
 .page-item {
   border-radius: 50%;
   border: 1px solid var(--dark-theme-color);
