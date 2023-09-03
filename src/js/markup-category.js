@@ -1,8 +1,12 @@
-const booksContainerEl = document.querySelector(".main-books-container")
+
 
 export default function markupByCategory(bookData) {
-    // console.log(bookData);
-    // АННА побудувати html ждя одної книжки 
-    // вставити в родітєля(booksContainerEl)
-   
-}
+    const categoryItems = document.querySelectorAll('.categories-list li');
+    categoryItems.forEach(item => {
+    item.classList.remove();
+    });
+    
+     
+      
+     
+} 
