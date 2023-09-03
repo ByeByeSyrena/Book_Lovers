@@ -137,7 +137,6 @@
 }
 
 @media screen and (min-width: 320px), screen and (max-width: 767px) {
-
   .shopping__list__first__title {
     font-size: 32px;
     line-height: 1.19;
@@ -185,7 +184,7 @@
   .shopping__list__link__images {
     width: 16px;
   }
- 
+
   .delete__button {
     width: 28px;
     height: 28px;
@@ -194,7 +193,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-
   .shopping__list__first__title {
     font-size: 48px;
     line-height: 1.08;
@@ -255,13 +253,11 @@
     padding-left: 40px;
     padding-right: 24px;
   }
-  
+
   .shopping__list__list {
     min-width: 996px;
   }
 }
-
-
 
 .shopping__list {
   padding: 40 24 0 40;
@@ -373,27 +369,113 @@
 }
 
 
-.tui-page-btn{
+/* !PAGINATION */
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination-list {
+  display: flex;
+  justify-content: center;
+}
+.numbers {
+  display: flex;
+}
+
+.first-page::before,
+.prev-page::before,
+.next-page::before,
+.last-page::before {
+  content: '';
+}
+
+.first-page::before {
+  content: '<<';
+}
+
+.prev-page::before {
+  content: '<';
+}
+
+.next-page::before {
+  content: '>';
+}
+
+.last-page::before {
+  content: '>>';
+}
+.page-item {
   border-radius: 50%;
   border: 1px solid var(--dark-theme-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
 }
-.tui-first{
-  background: var(--dark-theme-color);
+.first-page,
+.prev-page,
+.active {
+  background-color: var(--dark-theme-color);
+  color: var(--white-color);
 }
-.tui-last{
-  background: var(--yellow-color);
+.next-page,
+.last-page {
+  background-color: var(--yellow-color);
 }
-.tui-page-with-margin{
-  margin: 0 10px;
+.last-page:hover,
+.next-page:hover {
+  transform: translateX(3px);
 }
-.tui-prev-is-ellip{
-  margin-right: 10px;
+.first-page:hover,
+.prev-page:hover{
+  transform: translateX(-3px);
 }
-/* .tui-next .tui-ico-next,
-.tui-last .tui-ico-last {
-  color: black;
+.disable{
+  color: var(--light-gray-color);
 }
-.tui-prev .tui-ico-prev,
-.tui-first .tui-ico-first {
-  color: white; 
-} */
+
+@media only screen and (max-width: 767px) {
+  .pagination {
+    margin-top: 20px;
+  }
+  .numbers {
+    gap: 8px;
+    margin: 0 14px;
+  }
+  .first-page {
+    margin-right: 5px;
+  }
+  .next-page {
+    margin-right: 8px;
+  }
+  .current-page-3 {
+    visibility: hidden;
+  }
+  .page-item {
+    width: 38px;
+    height: 38px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .pagination {
+    margin-top: 40px;
+  }
+  .numbers {
+    gap: 10px;
+    margin: 0 24px;
+  }
+  .first-page {
+    margin-right: 8px;
+  }
+  .next-page {
+    margin-right: 8px;
+  }
+  .page-item {
+    width: 44px;
+    height: 44px;
+  }
+}
