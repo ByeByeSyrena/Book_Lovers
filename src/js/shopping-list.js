@@ -35,9 +35,6 @@ export function handleViewportResize() {
     firstElement?.classList.add('active-page');
   }
 
-  console.log(numbersPage.children.length)
-  console.log("Total page", totalPages)
-
   if (numbersPage.children.length > totalPages || pageNumber > totalPages) {
     const lastElement = numbersPage.lastElementChild;
     if (pageNumber > totalPages) {
@@ -48,7 +45,6 @@ export function handleViewportResize() {
     }
     numbersPage.removeChild(lastElement)
   }
-
 
   setMarkupBooks(perPage);
 }
