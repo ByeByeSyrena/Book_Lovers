@@ -181,15 +181,16 @@
 }
 
 @media only screen and (min-width: 375px) {
-  .best-books-img {
+  .book-item {
+    display: block;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .book-item {
     display: block;
-    margin-bottom: 148px;
-    flex-basis: calc((100% - 2 * 25px) / 3);
+    width: 218px;
+    flex-basis: calc((100% - 2 * 24px) / 3);
   }
 }
 
