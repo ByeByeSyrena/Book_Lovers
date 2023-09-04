@@ -35,12 +35,21 @@ export function handleViewportResize() {
     firstElement?.classList.add('active-page');
   }
 
-  if (pageNumber > totalPages) {
-    pageNumber -= 1;
+  console.log(numbersPage.children.length)
+  console.log("Total page", totalPages)
+
+  if (numbersPage.children.length > totalPages || pageNumber > totalPages) {
     const lastElement = numbersPage.lastElementChild;
-    lastElement?.classList.add('active-page');
-    setMarkupBooks(perPage);
+    if (pageNumber > totalPages) {
+      pageNumber -= 1;
+      lastElement?.classList.add('active-page');
+      setMarkupBooks(perPage);
+      return
+    }
+    numbersPage.removeChild(lastElement)
   }
+
+
   setMarkupBooks(perPage);
 }
 

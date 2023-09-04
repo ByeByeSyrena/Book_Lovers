@@ -83,6 +83,36 @@ const arraTest = [
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
     author: 'book author',
   },
+  {
+    id: '9',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title 8',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '10',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title 8',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
+  {
+    id: '11',
+    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
+    alt: 'book images',
+    title: 'Book title 8',
+    category: 'categorya',
+    description:
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
+    author: 'book author',
+  },
 ];
 
 localStorage.setItem(BOOKS_CARDS, JSON.stringify(arraTest));
