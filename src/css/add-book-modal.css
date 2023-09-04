@@ -1,43 +1,8 @@
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
 
-p:last-child {
-  margin-bottom: 0;
+.btn-book{
+  color: red;
 }
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-link {
-  text-decoration: none;
-}
-
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -50,31 +15,21 @@ link {
   position: fixed;
   top: 0;
   left: 0;
-  /* right: 0;
-  bottom: 0; */
+  
   width: 100%;
   height: 100vh;
-  z-index: 99;
+  z-index: 3000;
   display: grid;
   align-items: center;
   justify-content: center;
   overflow-y: auto;
-  /* visibility: hidden;
-  opacity: 0; */
-  /* overflow: hidden;
-  overflow-y: auto; */
   
-  /* display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center; */
-  /* padding: 30px 10px; */
   background-color: rgb(0, 0, 0, .3);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pop-up-container {
-  z-index: 98;
+  z-index:2999;
   position: relative;
   padding: 40px 24px;
   /* flex-shrink: 0;
@@ -94,31 +49,7 @@ link {
 .pop-up.is-hidden .pop-up-container{
   transform: scale(0);
 }
-.pop-up-modal {
-  /* display: block; */
-  
-  /* left: 50%; */
-  /* top: 50%; */
-  /* transform: translate(-50%, -50%); */
-  /* max-width: 278px; */
-  /* max-width: 287px; */
-  /* z-index: 101;  */
-  /* max-height: 762px; */
-  /* height: calc(100% - 5%);  */
-  
-  
-  /* overflow: scroll; */
-  /* background: var(--white-color); */
-  /* background-repeat: no-repeat; */
-  /* background-attachment: local;  */
-  /* margin: 50px 10px; */
-  /* flex-shrink: 0; */
-  /* flex-grow: 0; */
-  
-  /* width: 327px; */
-  /* max-width: 100%; */
-  /* overflow: visible; */
-}
+
 
 @media screen and (min-width: 375px) {
   .pop-up-modal {
@@ -176,101 +107,8 @@ link {
 
 
 
-.form-book {
-  
-}
-.form-img-book {
-  width: 287px;
-  height: 408px;
-  margin: 0 0 14px 0;
-  border-radius: 8px;
-}
-@media screen and (min-width: 375px) {
-  .form-img-book {
-    
-  }
-}
-@media screen and (min-width: 768px) {
-  .form-img-book {
-    width: 192px;
-    height: 281px;
-    margin: 0 24px 40px 0;
-  }
-}
-.form-title-book {
-  margin: 0;
-  height: 18px;
-  margin-bottom: 8px;
-}
-.book-name {
-  font-family: DM Sans;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  letter-spacing: -0.04em;
-  text-align: left;
-}
-.form-upertitle-book {
-  height: 14px;
-  margin-bottom: 18px;
-}
-.avtor-name {
-  font-family: DM Sans;
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: -0.04em;
-  text-align: left;
-}
-.form-text-book {
-  margin-bottom: 14px;
-}
-.description {
-  font-family: DM Sans;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: -0.04em;
-  text-align: left;
-  max-width: 279px;
-}
-.form-container-links-book {
-  max-height: 36px;
-  margin-bottom: 40px;
-}
-.form-links-book {
-  display: flex;
-  gap: 20px;
-}
-.form-link-book-amazon {
-  /* background-image: url(img/image\ 1.png); */
-  width: 62px;
-  height: 19px;
-}
-.form-link-book-amazon:hover,
-.form-link-book-amazon:focus {
-  /* background-image: url(img/amazon-hover.png); */
 
-}
-.form-link-book-ap {
-  /* background-image: url(img/app-def.png); */
-  width: 33px;
-  height: 32px;
-}
-.form-link-book-ap:hover,
-.form-link-book-ap:focus {
-  /* background-image: url(img/app-hover.png); */
-}
-.form-link-book-shop {
-  /* background-image: url(img/shop-def.png); */
-  width: 38px;
-  height: 36px;
-}
-.form-link-book-shop:hover,
-.form-link-book-shop:focus {
-  /* background-image: url(img/shop-hover.png); */
-}
+
 
 .yourorder-modal-submit-btn {
   background-color: #ffffff;
@@ -322,7 +160,7 @@ link {
   color: var(--violet-color);
 } */
 
-.shopping__list__list {
+.pop-up__list__list {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
@@ -341,16 +179,7 @@ link {
   box-sizing: border-box;
 }
 
-.shopping__list__btn__delete {
-  display: block;
-  position: absolute;
-  padding: 0;
-  background-color: var(--violet-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  border: none;
-}
+
 
 .poup__list__book__title {
   color: var(--dark-theme-color);
