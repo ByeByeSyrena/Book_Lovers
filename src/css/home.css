@@ -73,8 +73,10 @@
   .justify-books {
     display: flex;
     flex-wrap: wrap;
+    gap: 24px;
     height: 474px;
     justify-content: center;
+    align-items: flex-start;
   }
 }
 @media only screen and (min-width: 768px) {
