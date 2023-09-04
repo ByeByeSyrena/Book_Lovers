@@ -23,6 +23,9 @@
 .dark .categories-list{
     background-color: var(--dark-gray-color);
 }
+.dark .book-categories{
+    border: 1px solid var(--dark-gray-color);
+}
 .dark .active {
    color: var(--yellow-color);
   }
@@ -45,4 +48,8 @@ color: var(--white-color);
 .dark .shopping__list__description
 {
 color: var(--white-color);
+}
+.dark .see-more-button{
+    background-color: var(--dark-gray-color);
+    color: var(--white-color);
 }
