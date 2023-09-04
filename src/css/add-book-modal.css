@@ -16,10 +16,10 @@
 .modal-window {
   position: absolute;
   opacity: 1;
-  width: 95%;
+  width: 335px;
   height: 95%;
-  left: 0;
-  top: 0;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%) scale(1);
   border-radius: 20px;
   padding-top: 40px;

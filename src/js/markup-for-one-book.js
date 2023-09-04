@@ -10,7 +10,7 @@ export default function markupForOneBook(book) {
     `).join('');
 
     return `
-        <div class="backdrop">
+        <div class="backdrop-two">
             <div class="modal-window">
             <button type="button" class="close-modal-button">Close</button>
                 <img class="best-books-img" src="${book.book_image}" alt="${book.title}" width="218" height="316">
