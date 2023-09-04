@@ -6,7 +6,7 @@ import getTopBooks from "./fetch-best-sellers";
 import markupByCategory from "./markup-category";
 import markupTopBooks from "./markup-for-best-sellers";
 import markupForTabletOfTopBooks from "./markup-for-tablet";
-
+import markupForDesktopOfTopBooks from "./markup-for-desktop";
 
 const listCategories = document.querySelector(".categories-list")
 const mainTitleEl = document.querySelector(".main-title")
@@ -40,13 +40,7 @@ function onClickCategory(e) {
 
    } else {
        mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
-    //    getTopBooks()
-    //        .then(topBooksData => {
-    //            topBooksData.map(bookTop => markupTopBooks(bookTop));
-    //        })
-    //        .catch(error => console.log(error));
-
-       // АННА функція   markupTopBooks створена для побудови html книг по категорі
+  
    }
 }
 
@@ -55,10 +49,12 @@ getTopBooks().then(booksData => {
     const bestSellersContainer = document.querySelector(".main-books-container");
     mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
 
-    if (window.innerWidth >= 768 && window.innerWidth <= 1240) {
-        bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
-    } else {
+    if (window.innerWidth < 768) {
         bestSellersContainer.innerHTML = markupTopBooks(booksData);
+    } else if (window.innerWidth >= 768){
+        bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
+    } else if (window.innerWidth >= 1240){
+        bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
     }
 }).catch(error => console.log(error));
 
