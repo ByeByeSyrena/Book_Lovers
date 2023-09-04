@@ -1,0 +1,17 @@
+#scrollUpButton {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    padding: 7px 10px;
+    background-color: var(--dark-gray-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .dark #scrollUpButton{
+    background-color: var(--dark-gray-color);
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+  }
