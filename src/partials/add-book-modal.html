@@ -1,4 +1,3 @@
-
 <!-- <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -8,38 +7,35 @@
     <link rel="stylesheet" href="./index.css" />
     <script type="module" src="./index.js"></script>
   </head> -->
-  <body>
-    <div class="pop-up is-hidden" data-modal-pop-up>
-      <div class="pop-up-container">
-        <button
-          class="yourorder-modal-close-btn btn"
-          type="button"
-          data-modal-pop-up-close
-        >
-          <!-- <svg class="yourorder-modal-icon-close" width="12" height="12">
+
+<div class="pop-up is-hidden" data-modal-pop-up>
+  <div class="pop-up-container">
+    <button
+      class="yourorder-modal-close-btn btn"
+      type="button"
+      data-modal-pop-up-close
+    >
+      <!-- <svg class="yourorder-modal-icon-close" width="12" height="12">
             <use href="./sprite.svg#icon-x"></use>
           </svg> -->
-        </button>
-        <div class="container-form">
-          <ul class="pop-up__list__list js-markup-shopping__list">
-            <li>
-              <button class="yourorder-modal-submit-btn" type="submit">
-                Add to shopping list
-              </button>
-            </li>
-            <li class="umper-form is-hidden" pop-up-umper>
-              <p class="umpertitle-pop">
-                Сongratulations! You have added the book to the shopping list.
-                To delete, press the button “Remove from the shopping list”.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
+    </button>
+    <div class="container-form">
+      <ul class="pop-up__list__list">
+        <li>
+          <button class="yourorder-modal-submit-btn" type="button">
+            Add to shopping list
+          </button>
+        </li>
+        <li class="umper-form is-hidden" pop-up-umper>
+          <p class="umpertitle-pop">
+            Сongratulations! You have added the book to the shopping list. To
+            delete, press the button “Remove from the shopping list”.
+          </p>
+        </li>
+      </ul>
     </div>
-    <div class="fruits-btn-wrapper">
-      <button class="btn" type="button" data-modal-pop-up-open>book</button>
-    </div>
-  </body>
-</html>
-
+  </div>
+</div>
+<div class="fruits-btn-wrapper">
+  <button class="btn-book" type="button" data-modal-pop-up-open>book</button>
+</div>
