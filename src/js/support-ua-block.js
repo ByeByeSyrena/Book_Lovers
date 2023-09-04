@@ -103,7 +103,30 @@ const donateFunds = [
     generateDonateFundsMarkup(donateFunds)
   );
   
+// Button
+const donateButton = document.querySelector('.donate-button');
+const donateButtonUp = document.querySelector('.donate-button-up');
+const donateFound = document.querySelector('.donate-funds-visible');
 
+donateButton.addEventListener('click', function () {
+  donateButton.style.display = 'none';
+  donateButtonUp.style.display = 'block';
+
+    donateFound.scrollTo({
+    top: 10000,
+    behavior: 'smooth',
+  });
+});
+
+donateButtonUp.addEventListener('click', function () {
+  donateButtonUp.style.display = 'none';
+  donateButton.style.display = 'block';
+
+  donateFound.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});
  
 
   

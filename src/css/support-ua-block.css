@@ -164,6 +164,23 @@
     display: none;
   }
 
+  .donate-arrow-up {
+    fill: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg) scale(0.7);
+    width: 32px;
+    height: 32px;
+  }
+  
+  .donate-button-up:focus,
+  .donate-arrow-up:hover {
+    fill: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+  }
+  
+
   
   @media screen and (min-width: 768px) {
     .donate-container {
