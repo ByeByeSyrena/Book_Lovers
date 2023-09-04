@@ -71,8 +71,8 @@
 @media only screen and (min-width: 768px) {
   .main-books-container {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    column-gap: 40px;
     gap: 25px;
     margin-top: 0;
     margin-bottom: 0;
@@ -99,6 +99,7 @@
   text-transform: uppercase;
 }
 .colored {
+  color: var(--violet-color);
 }
 
 .main-container {
@@ -131,7 +132,7 @@
   text-transform: uppercase;
 }
 
-.author {
+.author-common {
   display: block;
   margin-bottom: 8px;
   color: #b4afaf;
@@ -140,6 +141,12 @@
   font-weight: 400;
   line-height: 14px;
   letter-spacing: -0.48px;
+}
+
+@media only screen and (min-width: 768px) {
+  .author-tablet {
+    color: #b4afaf;
+  }
 }
 
 .best-books-img {
@@ -153,17 +160,32 @@
     display: block;
     margin-bottom: 14px;
     width: 100%;
-    height: 316;
+    height: 316px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .best-books-img {
+    width: 180px;
+    height: 256px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .book-item {
+    display: block;
+    margin-bottom: 148px;
     flex-basis: calc((100% - 2 * 25px) / 3);
   }
 }
 
-.book-item {
+@media only screen and (min-width: 1240px) {
+  .book-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 calc(18% - 20px);
+  }
 }
 
 .main-title {
@@ -171,9 +193,14 @@
   margin-bottom: 40px;
 }
 
+@media only screen and (min-width: 768px) {
+  .main-title {
+    margin-bottom: 82px;
+  }
+}
+
 .see-more-button-container {
   display: flex;
-  justify-content: end;
 }
 
 @media only screen and (min-width: 768px) {
@@ -189,6 +216,15 @@
   .additional-class {
     display: none;
   }
+}
+
+.categories-only-for-tablet {
+  color: #b4afaf;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
 }
 
 .see-more-button {

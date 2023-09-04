@@ -1,13 +1,16 @@
-export default function markupTopBooks(ArrayOfTopCategories = []) {
-    return ArrayOfTopCategories.map(({ list_name, books }) => {
+
+export default function markupForTabletOfTopBooks(smallArrayOfTopCategories = []) {
+    return smallArrayOfTopCategories.map(({ books }) => {
+        let count = 0;
         const booksHTML = books.map(({ book_image, title, author }) => {
+            count++;
+            const additionalClass = count % 4 === 0 || count % 5 === 0 ? 'additional-class' : '';
+
             return `
-                <div class="book-item">
-                    <h2 class="name-category" data-name="${list_name}">${list_name}</h2>
-                    
+                <div class="book-item ${additionalClass}">
                     <img class="best-books-img" src="${book_image}" alt="${title}" width="218" height="316">
                     <h3 class="book-title" data-name="${title}">${title}</h3>
-                    <p class="author-common" data-name="${author}">${author}</p>
+                    <p class="author-tablet" data-name="${author}">${author}</p>
                     <div class="see-more-button-container"><button type="button" class="see-more-button">SEE MORE</button></div>
                 </div>
             `;
