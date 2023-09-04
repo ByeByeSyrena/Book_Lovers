@@ -23,6 +23,19 @@ headerIcons.addEventListener("click", () => {
     };
 });
 
+const menuLinks = document.querySelectorAll('.menu-link');
+menuLinks.forEach(link => {
+  link.addEventListener('click', function (e) { 
+    e.preventDefault(); 
+ 
+     menuLinks.forEach(menuLink => {
+      menuLink.classList.remove('active-link');  
+     }); 
+    this.classList.add('active-link');   
+ 
+    });      
+});    
+  
 
 
 
