@@ -2,7 +2,7 @@ export default function markupForTabletOfTopBooks(smallArrayOfTopCategories = []
     return smallArrayOfTopCategories.map(({ books }) => {
         return `<h2 class="name-category" data-name="${books[0].list_name}">${books[0].list_name}</h2>
 <div class="justify-books">
-            <div class="book-item">
+            <div class="book-item" data-book-id="${_id}>
             <div class ="book-item-img">
                 <img class="best-books-img" src="${books[0].book_image}" alt="${books[0].title}" width="218" height="316">
                 <p class = "best-books-text"> quick view </p>
@@ -12,7 +12,7 @@ export default function markupForTabletOfTopBooks(smallArrayOfTopCategories = []
                 <p class="author-bestsellers" data-name="${books[0].author}">${books[0].author}</p>
             </div>
            
-            <div class="book-item">
+            <div class="book-item" data-book-id="${_id}>
             <div class ="book-item-img">
             <img class="best-books-img" src="${books[1].book_image}" alt="${books[1].title}" width="218" height="316">
                 <p class = "best-books-text"> quick view </p>
@@ -21,7 +21,7 @@ export default function markupForTabletOfTopBooks(smallArrayOfTopCategories = []
                 <p class="author-bestsellers" data-name="${books[1].author}">${books[1].author}</p>
             </div>
             
-            <div class="book-item">
+            <div class="book-item" data-book-id="${_id}>
             <div class ="book-item-img">
                 <img class="best-books-img" src="${books[2].book_image}" alt="${books[2].title}" width="218" height="316">
                 <p class = "best-books-text"> quick view </p>
