@@ -55,7 +55,7 @@ function getBestSellers() {
 
     if (window.innerWidth < 768) {
         bestSellersContainer.innerHTML = markupTopBooks(booksData);
-    } else if (window.innerWidth >= 768 && window.innerWidth <= 1240){
+    } else if (window.innerWidth >= 768 && window.innerWidth <= 1240) {
         bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
     } else if (window.innerWidth >= 1240){
         bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
