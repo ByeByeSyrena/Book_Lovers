@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Raleway:ital,wght@0,800;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
 
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="public/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Store</title>
-  </head>
-  <body>
-    <include src="./partials/header.html"></include>
-    <include src="./partials/menu.html"></include>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Raleway:ital,wght@0,800;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
 
-    <main>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="public/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Store</title>
+</head>
+
+<body>
+  <include src="./partials/header.html"></include>
+  <include src="./partials/menu.html"></include>
+  
+  <main>
+    <!-- Header Support Ukraine -->
+    <!-- <div class="donate-container">
+      <div class="donate-header">
+        <span class="donate-paragraph">Support Ukraine</span>
+        <svg class="donate-emblem">
+          <use href="./images/icons.svg#emblem" width="20" height="32"></use>
+        </svg>
+      </div>
+      <div class="donate-funds-visible">
+        <ul class="donate-funds-list" id="donateFundsList"></ul>
+      </div> -->
+
       <div class="container">
         <div class="shopping__list">
           <h2 class="shopping__list__first__title">
@@ -29,23 +42,20 @@
             <p class="shopping__list__placeholder__descriptions">
               This page is empty, add some books and proceed to order.
             </p>
-            <img
-              class="shopping__list__placeholder__images"
-              srcset="
+            <img class="shopping__list__placeholder__images" srcset="
                 ./images/shopping-list/placeholder/IMG_9606.jpg    1x,
                 ./images/shopping-list/placeholder/IMG_9606@2x.jpg 2x
-              "
-              src="./images/shopping-list/placeholder/IMG_9606.jpg"
-              alt="tablet"
-              width="320"
-              height="240"
-            />
+              " src="./images/shopping-list/placeholder/IMG_9606.jpg" alt="tablet" width="320" height="240" />
           </div>
         </div>
         <div class="pagination">
           <ul class="pagination-list">
-            <li><button type="button" class="page-link page-item first-page" disabled><<</button></li>
-            <li><button type="button" class="page-link page-item prev-page" disabled><</button></li>
+            <li><button type="button" class="page-link page-item first-page" disabled>
+                <<</button>
+            </li>
+            <li><button type="button" class="page-link page-item prev-page" disabled>
+                <</button>
+            </li>
             <ul class="numbers">
             </ul>
             <li><button type="button" class="page-link page-item next-page">></button></li>
@@ -54,11 +64,14 @@
         </div>
       </div>
       <!-- Scroll UP -->
-    <button id ="scrollUpButton">Scroll Up</button>
-    </main>
-    <script type="module" src="./js/shopping-list.js"></script>
-    <script type="module" src="./js/theme-light-black.js"></script>
-    <script type="module" src="./js/header.js"></script>
-    <script type="module" src="./js/scroll.js"></script>
-  </body>
+      <button id="scrollUpButton">
+        <div class="ellip-scroll">Scroll Up</div>
+      </button>
+  </main>
+  <script type="module" src="./js/shopping-list.js"></script>
+  <script type="module" src="./js/theme-light-black.js"></script>
+  <script type="module" src="./js/header.js"></script>
+  <script type="module" src="./js/scroll.js"></script>
+</body>
+
 </html>

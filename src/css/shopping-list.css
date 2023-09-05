@@ -316,9 +316,8 @@
   line-height: 22px;
 }
 .first-page,
-.prev-page,
-.active {
-  /* background-color: var(--dark-theme-color); */
+.prev-page {
+  background-color: var(--dark-theme-color);
   color: var(--white-color);
 }
 .next-page,
@@ -381,5 +380,6 @@
 
 
 .active-page {
-  background-color: blue;
+  background-color: var(--dark-theme-color);
+  color: var(--white-color);
 }
