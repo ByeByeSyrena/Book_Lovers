@@ -20,7 +20,7 @@ function innerMarkupOfDesktopBestSellers(books) {
     
         const booksHtml = books.map(({_id, book_image, title, author}) => {
         return `
-            <div class="book-item" id="${_id}">
+            <div class="book-item" data-id="${_id}">
                 <img class="best-books-img" src="${book_image}" alt="${title}" width="218" height="316">
                 <h3 class="book-title" data-name="${title}">${title}</h3>
                 <p class="author-bestsellers" data-name="${author}">${author}</p>
