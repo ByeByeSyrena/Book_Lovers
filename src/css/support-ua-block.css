@@ -25,7 +25,7 @@
 
   .donate-container {
     /* width: 100%; */
-     max-width: 356px;
+     max-width: 335px;
     height: 352px;
     padding-left: 40px;
     padding-top: 24px;
@@ -44,9 +44,9 @@
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: -0.04em;
+    font-size: 22px;
+    line-height: 1.09;
+    letter-spacing: -0.88px;
   }
   
   .donate-header {
@@ -192,7 +192,8 @@
   
   @media screen and (min-width: 768px) {
     .donate-container {
-      height: 472px;
+      height: 474px;
+      margin-bottom: 0;
     }
   
     .donate-header {
@@ -202,13 +203,20 @@
     .donate-funds-visible {
       height: 320px;
     }
+
+    .donate-paragraph {
+      font-size: 24px;
+      line-height: 1.16;
+      letter-spacing: -0.96px;
+    }
+    
   
   }
   
   @media screen and (min-width: 1440px) {
     .donate-container {
       width: 356px;
-      height: 490px;
+    
     }
   
 
