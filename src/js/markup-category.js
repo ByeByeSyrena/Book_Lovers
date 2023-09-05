@@ -9,6 +9,5 @@ export default function markupByCategory(bookData) {
         </div>
     
     `
-    booksContainerEl.insertAdjacentHTML("beforeend",bookHtmlEl)
-   
+    booksContainerEl.insertAdjacentHTML("beforeend", bookHtmlEl)
 }
