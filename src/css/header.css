@@ -24,26 +24,57 @@ header {
     }
   }
 
-  .header-part-div {
-    display: flex;
-  }
-}
+    @media only screen and (min-width: 768px) {
+      .header-main-div {
+        width: 768px;
+        height: 72px;
+  
+      }
+    }
 
-@media only screen and (min-width: 375px) {
+    @media only screen and (min-width: 1280px) {
+      .header-main-div {
+        width: 1440px;
+        height: 72px;
+  
+      }
+    }
+
+  @media only screen and (min-width: 768px) {
+      .header-part-div {
+        display: flex;
+        align-items: center;
+   }
+        }
+    
+  @media only screen and (min-width: 375px) {
+          .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+  }
+   }
+    
+@media only screen and (min-width: 768px) {
+          .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+              margin-right: 40px;
+            
+ }
+   }
+
+@media only screen and (min-width: 1280px) {
   .header-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 24x;
+    margin-right: 76px;
   }
 }
+ 
 
-@media only screen and (min-width: 375px) {
-  .header-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-}
 
 .hidden {
   display: none;
@@ -57,18 +88,34 @@ header {
 
 @media only screen and (min-width: 768px) {
   .navigation-list {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    padding: 19px 0;
+   
   }
-
+} 
+ .home-span-btn{
+  color: var(--black-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 27px;
+  
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
+  }
+ 
+  @media only screen and (min-width: 768px) {
   .li-to-home-page {
-    margin-right: 24px;
+    margin-right: 16px; 
   }
+}
 
-  .li-to-shopping-page {
-    margin-right: 4px;
+@media only screen and (min-width: 1280px) {
+  .li-to-home-page {
+    margin-right: 24px; 
   }
-
+}
+ 
   .span-to-shopping-page {
     color: var(--black-color);
     font-size: 14px;
@@ -79,7 +126,7 @@ header {
     text-transform: uppercase;
   }
 
-  .home-span-btn {
+  .active-link {
     display: flex;
     color: var(--black-color);
     font-size: 14px;
@@ -89,7 +136,7 @@ header {
     text-transform: uppercase;
     padding: 8px 16px;
     align-items: flex-start;
-    gap: 10px;
+    
     border-radius: 36px;
     background: var(--yellow-color);
   }
@@ -97,8 +144,34 @@ header {
   .li-to-shopping-page {
     display: flex;
     align-items: flex-start;
-    gap: 4px;
+    gap: 4px; 
   }
+} 
+
+.active-page {
+  position: relative;
+
+}
+
+.active-page .active-svg {
+  position: relative; 
+}
+ 
+.active-svg::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  right: -5px; 
+  bottom: -5px; 
+  left: -5px;
+  border-radius: 36%;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+
 }
 
 /* The switch - the box around the slider */
