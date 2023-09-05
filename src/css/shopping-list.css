@@ -1,3 +1,4 @@
+
 .shopping__list__first__title {
   color: var(--dark-theme-color);
   font-family: DM Sans;
@@ -339,6 +340,7 @@
 @media only screen and (max-width: 767px) {
   .pagination {
     margin-top: 20px;
+    padding-bottom: 48px;
   }
   .numbers {
     gap: 8px;
@@ -361,6 +363,7 @@
 @media only screen and (min-width: 768px) {
   .pagination {
     margin-top: 40px;
+    padding-bottom: 40px;
   }
   .numbers {
     gap: 10px;

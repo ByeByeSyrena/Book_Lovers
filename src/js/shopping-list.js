@@ -1,6 +1,5 @@
 import { bookArray, setMarkup } from './markup-shopping-list';
-
-const BOOKS_CARDS = 'bookCards';
+import throttle from 'lodash.throttle';
 
 const pagination = document.querySelector('.pagination');
 const nextPage = document.querySelector('.next-page');
@@ -49,8 +48,8 @@ export function handleViewportResize() {
   setMarkupBooks(perPage);
 }
 
-window.addEventListener('resize', handleViewportResize);
-window.addEventListener('load', handleViewportResize);
+window.addEventListener('resize', throttle(handleViewportResize, 500));
+window.addEventListener('load', throttle(handleViewportResize, 500));
 
 export function setMarkupBooks(currentItem) {
   const startIndex = (pageNumber - 1) * currentItem;
@@ -65,7 +64,8 @@ function onClick(evt) {
     return;
   }
 
-  const buttonValue = evt.target.textContent;
+  const buttonValue = evt.target.textContent.trim();
+
   if (buttonValue === '<') {
     pageNumber -= 1;
   } else if (buttonValue === '>') {
@@ -94,8 +94,19 @@ function onClick(evt) {
     prevPage.disabled = false;
     firstPage.disabled = false;
   }
-
   handleViewportResize();
+
+  const listButtonItem = [...numbersPage.children];
+
+  listButtonItem.forEach(item => {
+    const textItem = Number(item.textContent.trim());
+
+    if (pageNumber === textItem) {
+      const currentActiveBtn = document.querySelector('.active-page');
+      currentActiveBtn?.classList.remove('active-page');
+      listButtonItem[textItem - 1].classList.add('active-page');
+    }
+  });
 }
 
 function creatButtonPages(page) {
