@@ -60,5 +60,5 @@ function getBestSellers() {
     } else if (window.innerWidth >= 1240){
         bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
     }
-}).catch(error => console.log(error));
+}).catch(error => Notify.failure('Sorry, please reload the page'));
 }
