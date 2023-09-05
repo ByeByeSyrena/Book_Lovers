@@ -1,113 +1,81 @@
-import { handleViewportResize } from './shopping-list';
-
 const BOOKS_CARDS = 'bookCards';
 
 const arraTest = [
   {
-    id: '1',
+    id: '1122334',
     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
     alt: 'book images',
-    title: 'Book title 1',
+    title: 'Book title',
     category: 'categorya',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
     author: 'book author',
   },
   {
-    id: '2',
+    id: '1122333',
     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
     alt: 'book images',
-    title: 'Book title 2',
+    title: 'Book title',
     category: 'categorya',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
     author: 'book author',
   },
   {
-    id: '3',
+    id: '1122332',
     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
     alt: 'book images',
-    title: 'Book title 3',
+    title: 'Book title',
     category: 'categorya',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
     author: 'book author',
   },
   {
-    id: '4',
+    id: '1122331',
     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
     alt: 'book images',
-    title: 'Book title 4',
+    title: 'Book title',
     category: 'categorya',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
     author: 'book author',
   },
   {
-    id: '5',
+    id: '1123411',
     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
     alt: 'book images',
-    title: 'Book title 5',
+    title: 'Book title',
     category: 'categorya',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
     author: 'book author',
   },
   {
-    id: '6',
+    id: '23412351234',
     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
     alt: 'book images',
-    title: 'Book title 6',
+    title: 'Book title',
     category: 'categorya',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
     author: 'book author',
   },
   {
-    id: '7',
+    id: '1324234',
     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
     alt: 'book images',
-    title: 'Book title 7',
+    title: 'Book title',
     category: 'categorya',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
     author: 'book author',
   },
   {
-    id: '8',
+    id: '1123412341',
     img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
     alt: 'book images',
-    title: 'Book title 8',
-    category: 'categorya',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-    author: 'book author',
-  },
-  {
-    id: '9',
-    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-    alt: 'book images',
-    title: 'Book title 8',
-    category: 'categorya',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-    author: 'book author',
-  },
-  {
-    id: '10',
-    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-    alt: 'book images',
-    title: 'Book title 8',
-    category: 'categorya',
-    description:
-      'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
-    author: 'book author',
-  },
-  {
-    id: '11',
-    img: 'https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png',
-    alt: 'book images',
-    title: 'Book title 8',
+    title: 'Book title',
     category: 'categorya',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit Provident ducimus sunt nostrum esse enim obcaecati cupiditate est veniam assumenda neque ea aut quam facilis deserunt laboriosam incidunt nemo, alias ex',
@@ -117,38 +85,37 @@ const arraTest = [
 
 localStorage.setItem(BOOKS_CARDS, JSON.stringify(arraTest));
 
-export let bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS));
+let bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS));
 
 const listMarkup = document.querySelector('.js-markup-shopping__list');
 const placeholder = document.querySelector('.js-placeholder');
-const pagination = document.querySelector('.pagination');
-
 listMarkup.addEventListener('click', deleteCard);
 
+setMarkup(bookArray);
 
 export function deleteCard(evt) {
     evt.preventDefault();
     if(!evt.target.id){
         return
     }
+    
     const bookIdDelete = evt.target.id;
     const newArray = bookArray.filter(book => book.id !== bookIdDelete);
  
     localStorage.setItem(BOOKS_CARDS, JSON.stringify(newArray));
     bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS))
   
-    handleViewportResize()
+    setMarkup(bookArray)
+
 }
 
-export function setMarkup(array) {
+function setMarkup(array) {
   listMarkup.innerHTML = creatMarkup(array);
   if (array.length) {
     placeholder.style.display = 'none';
-    listMarkup.style.display = 'flex';
-    pagination.style.display = 'flex';
+    listMarkup.style.display = 'felx';
   } else {
     listMarkup.style.display = 'none';
-    pagination.style.display = 'none';
     placeholder.style.display = 'flex';
   }
 }

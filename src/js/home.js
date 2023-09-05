@@ -34,19 +34,9 @@ function onClickCategory(e) {
     activeLiEl.classList.add("active")
     bestSellersContainer.innerHTML = "";
 
-    if (nameCategory) {
-       const wordsEl = nameCategory.split(' ');
-        if (wordsEl.length > 1) {
-            const lastEl = wordsEl.pop();
-
-            wordsEl.push(`<span style="color: #4F2EE8;">${lastEl}</span>`);
-        }
-
-        const coloredTitle = wordsEl.join(' ');
-
-        mainTitleEl.innerHTML = coloredTitle;    
-       
-    getCategoryData(nameCategory)
+   if (nameCategory) {
+     mainTitleEl.innerHTML = nameCategory;
+     getCategoryData(nameCategory)
        .then(booksData => {
            booksData.map(book => markupByCategory(book))
        })
@@ -70,5 +60,5 @@ function getBestSellers() {
     } else if (window.innerWidth >= 1240){
         bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
     }
-}).catch(error => Notify.failure('Sorry, please reload the page'));
+}).catch(error => console.log(error));
 }
