@@ -8,6 +8,7 @@ export default function markupForTabletOfTopBooks(smallArrayOfTopCategories = []
         <div class="book-item-wrap">
             ${innerMarkupOfTabletBestSellers(books)}
         </div>
+        <div class="see-more-button-container"><button type="button" class="see-more-button">SEE MORE</button></div>
       </div>
     `;
   });

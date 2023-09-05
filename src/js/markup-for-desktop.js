@@ -7,6 +7,7 @@ export default function markupForDesktopOfTopBooks(smallArrayOfTopCategories = [
         <div class="book-item-wrap">
             ${innerMarkupOfDesktopBestSellers(books)}
         </div>
+        <div class="see-more-button-container"><button type="button" class="see-more-button">SEE MORE</button></div>
       </div>
     `
   });
