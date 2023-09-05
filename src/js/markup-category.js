@@ -1,11 +1,11 @@
 const booksContainerEl = document.querySelector(".main-books-container")
 
-export default function markupByCategory({_id,book_image,title,author}) {
+export default function markupByCategory(bookData) {
     const bookHtmlEl = `
-        <div data-id="${_id}" class="book-item category-item">
-            <img class="best-books-img" src="${book_image}" alt="${title}">
-            <h3 class="book-title">${title}</h3>
-            <p class="author-bestsellers">${author}</p>
+        <div data-id="${bookData._id}" class="book-item category-item">
+            <img class="best-books-img" src="${bookData.book_image}" alt="${bookData.title}">
+            <h3 class="book-title">${bookData.title}</h3>
+            <p class="author-bestsellers">${bookData.author}</p>
         </div>
     
     `

@@ -61,10 +61,6 @@
     display: flex;
     height: 472px;
     margin-bottom: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    column-gap: 32px;
   }
 }
 @media only screen and (min-width: 1240px) {
@@ -122,9 +118,9 @@
   margin: 0 auto;
 }
 
-/* .donate-container {
+.donate-container {
   margin: 0 auto;
-} */
+}
 
 .name-category {
   display: block;
