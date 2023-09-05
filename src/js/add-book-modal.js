@@ -19,16 +19,4 @@ function showBookInfo(event) {
       })
       .catch(error => console.log(error.message));
   }
-
-//   const modal = document.querySelector('.modal-windoww');
-
-//   const clickX = event.clientX + window.scrollX;
-//   const clickY = event.clientY + window.scrollY;
-
-//   modal.style.left = clickX + 'px';
-//   modal.style.top = clickY + 'px';
-
-//   modal.classList.add('show-modal'); 
-
-//   event.preventDefault();
 }
