@@ -1,88 +1,90 @@
-.dark .header-main-div{
-    background: var(--dark-theme-color);
-    border-color: var(--white-color);
+.dark .header-main-div {
+  background: var(--dark-theme-color);
+  border-color: var(--white-color);
 }
-.dark header{
-    background-color: var(--dark-theme-color);
+.dark header {
+  background-color: var(--dark-theme-color);
 }
-.dark main{
-    background: var(--dark-gray-color);
+.dark main {
+  background: var(--dark-gray-color);
 }
-.dark .item-category{
-    color: var(--low-white-text);
+.dark .item-category {
+  color: var(--low-white-text);
 }
-.dark .header-logo svg{
-    fill: var(--white-bookshelf);
+.dark .header-logo svg {
+  fill: var(--white-bookshelf);
 }
-.dark .span-to-shopping-page{
-    color: var(--white-color);
+.dark .span-to-shopping-page {
+  color: var(--white-color);
 }
-.dark .basket svg{
-    fill: var(--white-color);
+
+.dark .home-span-btn {
+  color: var(--white-color);
 }
-.dark .main-title{
-    color: var(--white-color);
+
+.dark .basket svg {
+  fill: var(--white-color);
 }
-.dark .categories-list{
-    background-color: var(--dark-gray-color);
+.dark .main-title {
+  color: var(--white-color);
 }
-.dark .book-categories{
-    border: 1px solid var(--dark-gray-color);
+.dark .categories-list {
+  background-color: var(--dark-gray-color);
+}
+.dark .book-categories {
+  border: 1px solid var(--dark-gray-color);
 }
 .dark .active {
-   color: var(--yellow-color);
-  }
+  color: var(--yellow-color);
+}
 .dark .book-title,
 .author,
-.dark .shopping__list__first__title
-{
-    color: var(--white-color);
+.dark .shopping__list__first__title {
+  color: var(--white-color);
 }
 .dark .name-category {
-    color: var(--light-gray-color);
+  color: var(--light-gray-color);
 }
-.dark .shopping__list__item{
-    background-color: var(--dark-theme-color);
+.dark .shopping__list__item {
+  background-color: var(--dark-theme-color);
 }
-.dark .shopping__list__book__title
-{
-color: var(--white-color);
+.dark .shopping__list__book__title {
+  color: var(--white-color);
 }
-.dark .shopping__list__description
-{
-color: var(--white-color);
+.dark .shopping__list__description {
+  color: var(--white-color);
 }
-.dark .see-more-button{
-    background-color: var(--dark-gray-color);
-    color: var(--white-color);
+.dark .see-more-button {
+  background-color: var(--dark-gray-color);
+  color: var(--white-color);
 }
-.dark .burger-menu{
-    fill: var(--white-color);
+.dark .burger-menu {
+  fill: var(--white-color);
 }
-.dark .header-cross{
-    fill: var(--white-color);
+.dark .header-cross {
+  fill: var(--white-color);
 }
-.dark .active-svg{
-    fill: var(--white-color);
+.dark .active-svg {
+  fill: var(--white-color);
 }
-.dark .modal-window{
-    background: var(--dark-gray-color);
-    border-radius: 2px;
-    border-color: var(--white-color);
-    border-radius: 10px;
+.dark .modal-window {
+  background: var(--dark-gray-color);
+  border-radius: 2px;
+  border-color: var(--white-color);
+  border-radius: 10px;
 }
-.dark .poup__list__book__title{
-    color: var(--white-color);
+.dark .poup__list__book__title {
+  color: var(--white-color);
 }
-.dark .popup__list__author{
-    color: var(--white-color);
+.dark .popup__list__author {
+  color: var(--white-color);
 }
-.dark .yourorder-modal-submit-btn{
-    background-color: var(--dark-gray-color);
+.dark .yourorder-modal-submit-btn {
+  background-color: var(--dark-gray-color);
 }
-.dark .yourorder-modal-close-btn{
-    fill: var(--white-color);
+.dark .yourorder-modal-close-btn {
+  fill: var(--white-color);
 }
-.dark .span-btn{
-    color: var(--white-color);
+.dark .span-btn {
+  color: var(--white-color);
 }

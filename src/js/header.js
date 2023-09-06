@@ -38,7 +38,23 @@ const pageLinks = document.querySelectorAll('menu-link');
 }); 
 
 
- 
+// Header navigation - current location
+
+function colorCurrentPage(){
+const currentPageURL = window.location.href;
+
+const homeLinkLi = document.querySelector(".li-to-home-page");
+const shoppingListLinkLi = document.querySelector(".li-to-shopping-page");
+
+if (currentPageURL.includes("index.html")) {
+  homeLinkLi.classList.add("change-background"); 
+} else if (currentPageURL.includes("shopping-list.html")) {
+  shoppingListLinkLi.classList.add("change-background");
+}
+
+}
+colorCurrentPage();
+
  
 
  

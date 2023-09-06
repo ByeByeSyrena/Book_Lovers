@@ -241,3 +241,8 @@ header {
     gap: 76px;
   }
 }
+
+.change-background {
+  background-color: var(--yellow-color);
+  color: var(--black-color);
+}
