@@ -3,6 +3,10 @@
     display: none;
   }
 
+  .mobile-menu-container {
+    display: none;
+  }
+
   .menu-user-icon {
     display: none;
   }
@@ -23,22 +27,17 @@
     display: none;
   }
 }
-@media only screen and (max-width: 320px) {
-  .mobile-menu-container {
-    width: 320px;
-  }
-}
 
 @media only screen and (max-width: 767px) {
   .mobile-menu-container {
+    box-sizing: border-box;
     display: block;
     position: fixed;
-    top: 0;
+    width: 375px;
+    height: 100%;
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
     background: radial-gradient(
       189.32% 190.93% at 59.76% -23.42%,
       var(--violet-color) 18.03%,
