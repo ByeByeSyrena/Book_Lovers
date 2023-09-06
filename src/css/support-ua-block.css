@@ -1,8 +1,3 @@
-*,
-::before,
-::after {
-	box-sizing: border-box;
-}
 
 
 
@@ -37,6 +32,7 @@
     box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
     border-radius: 16px;
     margin-bottom: 40px;
+    box-sizing: border-box;
   }
 
   .donate-paragraph {
