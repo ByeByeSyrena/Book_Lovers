@@ -30,10 +30,10 @@
   --black-600: rgba(246, 246, 246, 0.5); /*для темної теми*/
   --btn_SighUp: #111; /*для темної теми*/
   --black-800: #202024; /*для темної теми*/
-   --black-650: rgba(17, 17, 17, 0.5); /* кнопка SIGN IN*/
+  --black-650: rgba(17, 17, 17, 0.5); /* кнопка SIGN IN*/
 }
 
-:root[data-theme="dark"] {
+:root[data-theme='dark'] {
   --black-900: #fff;
   --black-750: #fff9;
   --black-700: #fff9;
@@ -53,16 +53,18 @@ body {
   font-family: var(--font);
 }
 
-.container {
-  max-width: 375px;
-  padding: 0 20px;
-  margin: 0 auto;
+@media only screen and (min-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding: 0 15px;
+  }
 }
 
 @media only screen and (min-width: 335px) {
   .container {
-    max-width: 335px;
-    padding: 0 15px;
+    max-width: 375px;
+    padding: 0 20px;
+    margin: 0 auto;
   }
 }
 
@@ -70,12 +72,12 @@ body {
   .container {
     max-width: 768px;
     padding: 0 32px;
-  } 
+  }
 }
 
 @media only screen and (min-width: 1440px) {
   .container {
-    max-width: 1440px; 
+    max-width: 1440px;
     padding: 0 24px;
   }
 }
