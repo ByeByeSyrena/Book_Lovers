@@ -4,6 +4,15 @@
   margin-right: auto;
 }
 
+.shopping__list__box {
+  width: 100%;
+}
+
+.shopping__list__container {
+  max-width: 335px;
+  padding: 0 15px;
+}
+
 .shopping__list__support {
  margin-top: 40px;
 }
@@ -125,16 +134,25 @@
   background-position: center center;
 }
 
+
 @media screen and (min-width: 320px), screen and (max-width: 560px) {
   .shopping__list__description {
-    height: 40px;
+    height: 38px;
     overflow: hidden;
   }
-  
+
+  .shopping__list__author {
+    width: 90px;
+  }
 }
 
-@media screen and (min-width: 320px), screen and (max-width: 767px) {
+@media screen and (min-width: 346px), screen and (max-width: 767px) {
+  .shopping__list__container {
+    padding: 0 5px;
+  }
+
   .shopping__list__first__title {
+    margin-left: 10px;
     font-size: 32px;
     line-height: 1.19;
     letter-spacing: -1.28px;
@@ -143,7 +161,6 @@
   .shopping__list {
     margin-left: auto;
     margin-right: auto;
-    max-width: 320px;
     padding-top: 40px;
   }
 
@@ -153,7 +170,7 @@
   }
   
   .shopping__list__book__title {
-    max-width: 150px;
+    max-width: 140px;
   }
 
   .shopping__list__category{
@@ -185,7 +202,7 @@
   }
 
   .shopping__list__description {
-    min-height: 50px;
+    min-height: 30px;
   }
 
   .shopping__list__link__images {
@@ -220,13 +237,20 @@
   }
 }
 
+
 @media only screen and (min-width: 768px) {
+  .shopping__list__container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+
   .shopping__list{
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
-    min-width: 768px;
   }
   .shopping__list__first__title {
+    margin-left: 0px;
     font-size: 48px;
     line-height: 1.08;
     letter-spacing: -1.92px;
@@ -238,10 +262,13 @@
   }
 
   .shopping__list__item {
-    min-width: 335px;
     height: 214px;
     padding: 24px 24px;
     gap: 24px;
+  }
+
+  .shopping__list__book__title {
+    max-width: 400px;
   }
 
   .shopping__list__book__image {
@@ -256,7 +283,9 @@
   .shopping__list__author {
     left: 164px;
     bottom: 30px;
+    width: 150px;
   }
+
 
   .shopping__list__btn__delete {
     right: 24px;
@@ -308,8 +337,14 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .shopping__list__container {
+    max-width: 1440px; 
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   .shopping__list {
-    min-width: 996px;
+    max-width: 996px;
     padding-left: 40px;
     padding-right: 24px;
   }
