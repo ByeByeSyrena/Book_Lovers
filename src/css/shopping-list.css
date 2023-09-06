@@ -130,6 +130,7 @@
     height: 40px;
     overflow: hidden;
   }
+  
 }
 
 @media screen and (min-width: 320px), screen and (max-width: 767px) {
@@ -142,15 +143,15 @@
   .shopping__list {
     margin-left: auto;
     margin-right: auto;
-    min-width: 320px;
+    max-width: 320px;
     padding-top: 40px;
   }
 
   .shopping__list__item {
-    min-width: 305px;
     height: 170px;
     padding: 12px 12px;
   }
+  
   .shopping__list__book__title {
     max-width: 150px;
   }
