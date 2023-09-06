@@ -37,6 +37,18 @@ const pageLinks = document.querySelectorAll('menu-link');
   });
 }); 
 
+const bodyEl = document.querySelector(".current");
+const shoppingLink = document.querySelector(".shopping-link");
+const activeLink = document.querySelector(".active-link")
+
+ function current() {
+if(bodyEl.classList.contains('current')){
+
+  shoppingLink.classList.add('heder_link--current');
+  activeLink.classList.add('active-link-none');
+}
+ };
+ current();
 
  
  
