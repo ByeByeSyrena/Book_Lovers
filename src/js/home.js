@@ -76,6 +76,9 @@ function getBestSellers() {
                 item.addEventListener("click", getBookCard);
             });
         }
+
+
+
         
         function getBookCard(event) {
             const selectedBookElement = event.target.closest('.book-item');
@@ -86,12 +89,29 @@ function getBestSellers() {
                         const modalMarkup = markupForOneBook(data);
                 const modalContainer = document.getElementById('modal-container');
                 modalContainer.innerHTML = modalMarkup;
+
+                //  const closeModalButton = document.getElementsByClassName("close-modal-button");
+                //  closeModalButton.addEventListener("click",function () {
+                //     modalContainer.innerHTML = "";
+
+                //  })
+                //  window.addEventListener("click",function(event) {
+                //     if (event.target === modalContainer) {
+                //         modalContainer.innerHTML = "";
+                        
+                //     }
+                    
+                // })
+
                     })
                     .catch(error => console.log(error.message));
+
             }
         }
     }).catch(error => console.log(error));
 }
+
+
 
 
 // selector.addEventListener('click', showBookInfo);

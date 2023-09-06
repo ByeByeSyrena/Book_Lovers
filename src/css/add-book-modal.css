@@ -13,24 +13,143 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-window {
-  position: absolute;
-  opacity: 1;
-  width: 95%;
-  height: 95%;
-  left: 0;
-  top: 0;
-  transform: translate(-50%, -50%) scale(1);
-  border-radius: 20px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-
-  background: var(--white-color);
+.hidden {
+display: none;
 }
 
-@media only screen and (min-width: 320px) {
+.close-modal-button {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background-color: transparent;
+  border: none;
+  stroke: #111;
+}
+button:hover svg {
+  stroke: blue;
+}
+
+.modal-window {
+  /* position: absolute; */
+  opacity: 1; 
+  /* width: 95%;
+  height: 95%; */
+  /* left: 0;
+  top: 0; */
+  /* transform: translate(-50%, -50%) scale(1); */
+  background: white; 
+  border: 2px solid  #111;
+  border-radius: 20px;
+  max-width: 335px;
+  height: 860px;
+  max-height: 98vh;
+  padding: 40px 24px 24px;
+  overflow-y: auto;
+}
+
+.shop-list {
+  margin-top: 14px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: auto;
+  stroke:  #111;
+}
+
+
+.btn-local {
+  animation-name: vilet;
+    animation-duration: 500ms;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 40px;
+  border: 2px solid blue;
+  padding: 14px 23px;
+  margin-top: 40px;
+  background-color: transparent;
+  color:  #111;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.29;
+  letter-spacing: -0.14px;
+  text-transform: uppercase;
+  transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-local:is(:hover, :focus) {
+  color: #ffffff;
+  background: blue;
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
+}
+
+.txt-remove {
+  animation-name: vilet;
+    animation-duration: 500ms;
+  margin: 0 auto;
+  margin-top: 8px;
+  max-width: 210px;
+  color:rgba(17, 17, 17, 0.5);
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+}
+
+
+/* @media only screen and (min-width: 320px) {
   .modal-window {
     width: 579px;
     height: 501px;
+  }
+} */
+
+@media screen and (min-width: 768px) {
+  .modal-window {
+    padding: 40px;
+    max-width: 579px;
+    height: 465x;
+    max-height: 85vh;
+  }
+
+  .shop-list {
+    margin-top: 20px;
+    padding-bottom: 5px;
+    max-width: 75%;
+  }
+
+  .btn-local {
+    padding: 20px 20px;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.18px;
+  }
+
+  .txt-remove {
+    max-width: 325px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  
+
+  .txt-remove {
+    max-width: 325px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: -0.48px;
   }
 }
