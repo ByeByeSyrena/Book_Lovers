@@ -49,14 +49,14 @@ export function creatMarkup(books) {
         </button>
         <img
           class="shopping__list__book__image"
-          src="${book_image}"
-          alt="${title}"
+          src="${book_image ? book_image : "https://netsh.pp.ua/wp-content/uploads/2017/08/Placeholder-1.png"}"
+          alt="${title ? title : "Sorry no title"}"
         />
         <div class="shopping__list__box__description">
-          <h3 class="shopping__list__book__title">${title}</h3>
-          <p class="shopping__list__category">${list_name}</p>
-          <p class="shopping__list__description">${description? description : "Sorry no description"}</p>
-          <p class="shopping__list__author">${author}</p>
+          <h3 class="shopping__list__book__title">${title ? title : "Sorry no title"}</h3>
+          <p class="shopping__list__category">${list_name ? list_name : "Sorry no category"}</p>
+          <p class="shopping__list__description">${description ? description : "Sorry no description"}</p>
+          <p class="shopping__list__author">${author ? author : "Sorry no author"}</p>
         </div>
         <ul class="shopping__list__link__list">
         <li class="shopping__list__link__item">
