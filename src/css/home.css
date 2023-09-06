@@ -109,10 +109,6 @@
   color: var(--violet-color);
 }
 
-.main-container {
-  margin: 0 auto;
-}
-
 .donate-container {
   margin: 0 auto;
 }
@@ -191,15 +187,6 @@
     flex-basis: calc((100% - 2 * 24px) / 3);
   }
 }
-
-/* @media only screen and (min-width: 1240px) {
-  .book-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-basis: calc((100% - 4 * 25px) / 5);
-  }
-} */
 
 .main-title {
   display: block;
