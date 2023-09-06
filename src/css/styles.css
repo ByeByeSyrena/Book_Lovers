@@ -34,29 +34,32 @@ body {
   font-family: var(--font);
 }
 
+@media screen and (min-width: 320px) {
 .container {
-  max-width: 375px;
+  width: 100%;  
   padding: 0 20px;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 335px) {
-  .container {
-    max-width: 335px;
-    padding: 0 15px;
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 375px) { 
   .container {
-    max-width: 768px;
-    padding: 0 32px;
-  } 
+    max-width: 333px;  
+    margin-left: auto; 
+    margin-right: auto;   
+
+  }
 }
 
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .container {
-    max-width: 1440px; 
+    max-width: 702px;
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1390px; 
     padding: 0 24px;
   }
 }
