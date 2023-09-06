@@ -2,6 +2,9 @@
     background: var(--dark-theme-color);
     border-color: var(--white-color);
 }
+.dark header{
+    background-color: var(--dark-theme-color);
+}
 .dark main{
     background: var(--dark-gray-color);
 }
@@ -59,4 +62,27 @@ color: var(--white-color);
 .dark .header-cross{
     fill: var(--white-color);
 }
-
+.dark .active-svg{
+    fill: var(--white-color);
+}
+.dark .modal-window{
+    background: var(--dark-gray-color);
+    border-radius: 2px;
+    border-color: var(--white-color);
+    border-radius: 10px;
+}
+.dark .poup__list__book__title{
+    color: var(--white-color);
+}
+.dark .popup__list__author{
+    color: var(--white-color);
+}
+.dark .yourorder-modal-submit-btn{
+    background-color: var(--dark-gray-color);
+}
+.dark .yourorder-modal-close-btn{
+    fill: var(--white-color);
+}
+.dark .span-btn{
+    color: var(--white-color);
+}
