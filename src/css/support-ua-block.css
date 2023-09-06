@@ -44,16 +44,17 @@
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: -0.04em;
+    font-size: 22px;
+    line-height: 1.09;
+    letter-spacing: -0.88px;
   }
   
   .donate-header {
     display: flex;
     flex-direction: row;
     gap: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 44px;
+    align-items: center;
   }
   
   .donate-index {
@@ -71,8 +72,8 @@
   }
   
   .donate-funds-visible {
-    width: 170px;
-    height: 220px;
+    width: 159px;
+    height: 188px;
     overflow: auto;
     scroll-behavior: smooth;
   }
@@ -192,15 +193,17 @@
   
   @media screen and (min-width: 768px) {
     .donate-container {
-      height: 472px;
+      height: 474px;
+      width: 335px;
+
     }
   
     .donate-header {
-      margin-bottom: 25px;
+      margin-bottom: 42px;
     }
   
     .donate-funds-visible {
-      height: 320px;
+      height: 292px;
     }
   
   }
@@ -208,7 +211,6 @@
   @media screen and (min-width: 1440px) {
     .donate-container {
       width: 356px;
-      height: 490px;
     }
   
 
