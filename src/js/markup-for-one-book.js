@@ -1,31 +1,31 @@
 import getIdData from './fetch-one-book-info';
 // const iDBOOK = '';
 
-(() => {
-  const refs = {
-    closeModalBtn: document.querySelector('[data-modal-pop-up-close]'),
-    modal: document.querySelector('[data-modal-pop-up]'),
-  };
+// (() => {
+//   const refs = {
+//     closeModalBtn: document.querySelector('[data-modal-pop-up-close]'),
+//     modal: document.querySelector('[data-modal-pop-up]'),
+//   };
 
-  //   refs.closeModalBtn.addEventListener('click', toggleModal);
-  //   window.addEventListener('keydown', e => {
-  //     if (e.key === 'Escape') {
-  //       toggleModal();
-  //     }
-  //   });
-  //   document
-  //     .querySelector('.pop-up .pop-up-container')
-  //     .addEventListener('click', event => {
-  //       event._isClicWithInModal = true;
-  //     });
-  //   refs.modal.addEventListener('click', event => {
-  //     if (event._isClicWithInModal) return;
-  //     toggleModal();
-  //   });
-  //   function toggleModal() {
-  //     refs.modal.classList.toggle('is-hidden');
-  //   }
-})();
+//   //   refs.closeModalBtn.addEventListener('click', toggleModal);
+//   //   window.addEventListener('keydown', e => {
+//   //     if (e.key === 'Escape') {
+//   //       toggleModal();
+//   //     }
+//   //   });
+//   //   document
+//   //     .querySelector('.pop-up .pop-up-container')
+//   //     .addEventListener('click', event => {
+//   //       event._isClicWithInModal = true;
+//   //     });
+//   //   refs.modal.addEventListener('click', event => {
+//   //     if (event._isClicWithInModal) return;
+//   //     toggleModal();
+//   //   });
+//   //   function toggleModal() {
+//   //     refs.modal.classList.toggle('is-hidden');
+//   //   }
+// })();
 const items = JSON.parse(localStorage.getItem('bookCards')) || [];
 
 export default function markupForOneBook({
@@ -36,7 +36,14 @@ export default function markupForOneBook({
   description,
   title,
 }) {
-  //   iDBOOK = _id;
+  //   getIdData(_id).then(content => {
+  //     if (items.find(option => option._id === content._id)) {
+  //       localStorBtn.textContent = 'remove from the shopping list';
+  //     } else {
+  //       localStorBtn.textContent = ' add to shopping list';
+  //     }
+  //   });
+
   const buyLinks = buy_links || [];
   const sliceArray = buyLinks.slice(0, 3);
 
@@ -73,8 +80,9 @@ export default function markupForOneBook({
       if (items.find(option => option._id === content._id)) {
         console.log(1);
         status = 'add';
-        localStorBtn.textContent = 'remove from the shopping list';
-        umper.removeAttribute('is-hidden');
+        localStorBtn.textContent = ' add to shopping list';
+
+        umper.classList.add('is-hidden');
 
         const deletable = content._id;
 
@@ -91,8 +99,8 @@ export default function markupForOneBook({
       } else {
         console.log(2);
         localStorBtn.textContent = ' add to shopping list';
-        umper.classList.add('is-hidden');
-
+        umper.classList.remove('is-hidden');
+        localStorBtn.textContent = 'remove from the shopping list';
         items.push(content);
         localStorage.setItem('bookCards', JSON.stringify(items));
 
@@ -103,7 +111,7 @@ export default function markupForOneBook({
   });
   console.log(_id);
   return `
-        <div class="backdrop">
+        <div class="backdrop ">
             <div class="modal-window">
             <button
           class="yourorder-modal-close-btn btn"
@@ -161,3 +169,4 @@ function getLinkImageSource(linkName) {
 //   console.log(content);
 // });
 // console.log(iDBOOK);
+// localStorage.clear('bookCard');
