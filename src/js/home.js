@@ -36,9 +36,19 @@ function onClickCategory(e) {
     activeLiEl.classList.add("active")
     bestSellersContainer.innerHTML = "";
 
-   if (nameCategory) {
-     mainTitleEl.innerHTML = nameCategory;
-     getCategoryData(nameCategory)
+    if (nameCategory) {
+        const wordEl = nameCategory.split(' ');
+        if (wordEl.length > 1) {
+            const lastEl = wordEl.pop();
+
+            wordEl.push(`<span style="color: #4F2EE8;">${lastEl}</span>`);
+        }
+
+        const coloredTitle = wordEl.join(' ');
+
+        mainTitleEl.innerHTML = coloredTitle;
+
+    getCategoryData(nameCategory)
        .then(booksData => {
            booksData.map(book => markupByCategory(book))
        })
@@ -56,42 +66,34 @@ function getBestSellers() {
 
         if (window.innerWidth < 768) {
             bestSellersContainer.innerHTML = markupTopBooks(booksData);
-
-            const bookItems = document.querySelectorAll(".book-item");
-            bookItems.forEach(item => {
-                item.addEventListener("click", getBookCard);
-            });
-        } else if (window.innerWidth >= 768 && window.innerWidth <= 1240) {
+        } else if (window.innerWidth >= 768 && window.innerWidth <= 1440) {
             bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
-            
-            const bookItems = document.querySelectorAll(".book-item");
-            bookItems.forEach(item => {
-                item.addEventListener("click", getBookCard);
-            });
-        } else if (window.innerWidth >= 1240) {
+        } else if (window.innerWidth > 1440) {
             bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
+        }
 
-            const bookItems = document.querySelectorAll(".book-item");
-            bookItems.forEach(item => {
-                item.addEventListener("click", getBookCard);
-            });
-        }
-        
-        function getBookCard(event) {
-            const selectedBookElement = event.target.closest('.book-item');
-            if (selectedBookElement) {
-                const selectedBookId = selectedBookElement.dataset.id;
-                getIdData(selectedBookId)
-                    .then(data => {
-                        const modalMarkup = markupForOneBook(data);
-                const modalContainer = document.getElementById('modal-container');
-                modalContainer.innerHTML = modalMarkup;
-                    })
-                    .catch(error => console.log(error.message));
-            }
-        }
+        const bookItems = document.querySelectorAll(".book-item");
+        bookItems.forEach(item => {
+            item.addEventListener("click", getBookCard);
+        });
     }).catch(error => console.log(error));
 }
+
+function getBookCard(event) {
+    const selectedBookElement = event.target.closest('.book-item');
+    if (selectedBookElement) {
+        const selectedBookId = selectedBookElement.dataset.id;
+        getIdData(selectedBookId)
+            .then(data => {
+                const modalMarkup = markupForOneBook(data);
+                const modalContainer = document.getElementById('modal-container');
+                modalContainer.innerHTML = modalMarkup;
+            })
+            .catch(error => console.log(error.message));
+    }
+}
+
+getBestSellers();
 
 
 // selector.addEventListener('click', showBookInfo);

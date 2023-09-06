@@ -17,7 +17,7 @@
     display: block;
   }
 }
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1440px) {
   .main-container {
     display: flex;
   }
@@ -34,7 +34,19 @@
 
 @media only screen and (min-width: 768px) {
   .categories-list {
+    display: flex;
+    flex-direction: column;
     height: 472px;
+    width: 337px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .categories-list {
+    display: flex;
+    flex-direction: column;
+    height: 472px;
+    width: 337px;
   }
 }
 
@@ -50,6 +62,7 @@
 
 @media only screen and (min-width: 768px) {
   .book-categories {
+    display: block;
     height: 472px;
     margin-bottom: 86px;
     border: 1px solid var(--almost-white-color);
@@ -59,6 +72,9 @@
 @media only screen and (min-width: 768px) {
   .left-container {
     display: flex;
+    flex-wrap: wrap;
+    padding-left: 32px;
+    gap: 32px;
     height: 472px;
     margin-bottom: 100px;
     column-gap: 32px;
@@ -66,10 +82,10 @@
     margin-right: auto;
   }
 }
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1440px) {
   .left-container {
-    flex-direction: column;
     width: 356px;
+    height: 100%;
   }
 }
 
@@ -101,8 +117,6 @@
   font-weight: 400;
   line-height: 18px; /* 112.5% */
   letter-spacing: -0.32px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .item-category.active {
@@ -117,9 +131,14 @@
   color: var(--violet-color);
 }
 
-.main-container {
+/* .main-container {
   margin: 0 auto;
 }
+
+
+.donate-container {
+  margin: 0 auto;
+} */
 
 .name-category {
   display: block;
@@ -187,7 +206,7 @@
     width: 100%;
   }
 }
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1440px) {
   .best-books-img {
     width: 180px;
     height: 256px;
@@ -202,7 +221,7 @@
   }
 }
 
-@media only screen and (min-width: 1240px) {
+@media only screen and (min-width: 1440px) {
   .book-item {
     display: flex;
     flex-direction: column;
@@ -274,7 +293,7 @@
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1240px) {
+@media only screen and (min-width: 768px) and (max-width: 1440px) {
   .additional-class {
     display: none;
   }
