@@ -64,11 +64,11 @@ function getBestSellers() {
     getTopBooks().then(booksData => {
         mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
 
-        if (window.innerWidth < 768) {
+        if (window.innerWidth <= 768) {
             bestSellersContainer.innerHTML = markupTopBooks(booksData);
-        } else if (window.innerWidth >= 768 && window.innerWidth <= 1440) {
+        } else if (window.innerWidth > 768 && window.innerWidth < 1440) {
             bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
-        } else if (window.innerWidth > 1440) {
+        } else if (window.innerWidth >= 1440) {
             bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
         }
 
@@ -95,17 +95,3 @@ function getBookCard(event) {
 
 getBestSellers();
 
-
-// selector.addEventListener('click', showBookInfo);
-
-// function showBookInfo(event) {
-//   const bookItem = event.target.closest('.book-item');
-//   if (bookItem) {
-//     const bookId = bookItem.id;
-//     getIdData(bookId)
-//       .then(data => {
-//         markupForOneBook(data);
-//       })
-//       .catch(error => console.log(error.message));
-//   }
-// }
