@@ -1,40 +1,40 @@
-import getAllCategories from "./fetch-category-list";
+import getAllCategories from './fetch-category-list';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import markupCategoryList from "./markup-category-list";
-import getCategoryData from "./fetch-one-category";
-import getTopBooks from "./fetch-best-sellers";
-import markupByCategory from "./markup-category";
-import markupTopBooks from "./markup-for-best-sellers";
-import markupForTabletOfTopBooks from "./markup-for-tablet";
-import markupForDesktopOfTopBooks from "./markup-for-desktop";
-import markupForOneBook from "./markup-for-one-book";
-import getIdData from "./fetch-one-book-info";
+import markupCategoryList from './markup-category-list';
+import getCategoryData from './fetch-one-category';
+import getTopBooks from './fetch-best-sellers';
+import markupByCategory from './markup-category';
+import markupTopBooks from './markup-for-best-sellers';
+import markupForTabletOfTopBooks from './markup-for-tablet';
+import markupForDesktopOfTopBooks from './markup-for-desktop';
+import markupForOneBook from './markup-for-one-book';
+import getIdData from './fetch-one-book-info';
 
-const listCategories = document.querySelector(".categories-list")
-const mainTitleEl = document.querySelector(".main-title")
-const bestSellersContainer = document.querySelector(".main-books-container");
-let listEl
+const listCategories = document.querySelector('.categories-list');
+const mainTitleEl = document.querySelector('.main-title');
+const bestSellersContainer = document.querySelector('.main-books-container');
+let listEl;
 
 getAllCategories()
-    .then(allCategories => {
-      allCategories.map(categoryName => markupCategoryList(categoryName))
-       listEl = document.querySelectorAll(".item-category")
-   })
-   .catch(() => Notify.failure('Sorry, please reload the page'))
+  .then(allCategories => {
+    allCategories.map(categoryName => markupCategoryList(categoryName));
+    listEl = document.querySelectorAll('.item-category');
+  })
+  .catch(() => Notify.failure('Sorry, please reload the page'));
 
-listCategories.addEventListener("click", onClickCategory)
+listCategories.addEventListener('click', onClickCategory);
 
 getBestSellers();
 
 function onClickCategory(e) {
-   const activeLiEl = e.target;
-   const nameCategory = activeLiEl.dataset.name;
-   listEl.forEach(li => {
-       li.classList.remove("active")
-   })
+  const activeLiEl = e.target;
+  const nameCategory = activeLiEl.dataset.name;
+  listEl.forEach(li => {
+    li.classList.remove('active');
+  });
 
-    activeLiEl.classList.add("active")
-    bestSellersContainer.innerHTML = "";
+  activeLiEl.classList.add('active');
+  bestSellersContainer.innerHTML = '';
 
     if (nameCategory) {
         const wordEl = nameCategory.split(' ');
@@ -61,8 +61,10 @@ function onClickCategory(e) {
 }
 
 function getBestSellers() {
-    getTopBooks().then(booksData => {
-        mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
+  getTopBooks()
+    .then(booksData => {
+      mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
+
 
         if (window.innerWidth <= 768) {
             bestSellersContainer.innerHTML = markupTopBooks(booksData);
