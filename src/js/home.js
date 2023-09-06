@@ -34,9 +34,19 @@ function onClickCategory(e) {
     activeLiEl.classList.add("active")
     bestSellersContainer.innerHTML = "";
 
-   if (nameCategory) {
-     mainTitleEl.innerHTML = nameCategory;
-     getCategoryData(nameCategory)
+    if (nameCategory) {
+        const wordEl = nameCategory.split(' ');
+        if (wordEl.length > 1) {
+            const lastEl = wordEl.pop();
+
+            wordEl.push(`<span style="color: #4F2EE8;">${lastEl}</span>`);
+        }
+
+        const coloredTitle = wordEl.join(' ');
+
+        mainTitleEl.innerHTML = coloredTitle;
+
+    getCategoryData(nameCategory)
        .then(booksData => {
            booksData.map(book => markupByCategory(book))
        })
