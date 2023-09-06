@@ -1,3 +1,4 @@
+
 .visual-hidden {
   position: absolute;
   white-space: nowrap;
@@ -181,15 +182,69 @@
 
 @media screen and (min-width: 768px) {
   .donate-container {
-    height: 472px;
+    /* width: 100%; */
+     max-width: 356px;
+    height: 352px;
+    padding-left: 40px;
+    padding-top: 24px;
+    padding-bottom: 20px;
+    padding-right: 40px;
+    background: radial-gradient(
+      183.6% 183.01% at 59.76% -23.42%,var(--violet-color) 18.03%,var(--white-color) 100%
+    );
+    box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
   }
 
+  .donate-paragraph {
+    color: var(--white-color);
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.09;
+    letter-spacing: -0.88px;
+  }
+  
   .donate-header {
-    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-bottom: 44px;
+    align-items: center;
+  }
+  
+  .donate-index {
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--white-color);
+    letter-spacing: -0.04em;
   }
 
   .donate-funds-visible {
-    height: 320px;
+    width: 159px;
+    height: 188px;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .donate-fund {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 16px;
+  }
+  
+  .donate-item-link {
+    margin-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
   }
 }
 @media screen and (min-width: 768px) {
@@ -207,12 +262,49 @@
     height: 474px;
   }
 
-  .donate-container {
-    width: 356px;
-    height: 490px;
-  }
-
-  .main-wrapper {
+  .donate-arrow-up {
+    fill: #ffffff;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg) scale(0.7);
+    width: 32px;
+    height: 32px;
+  }
+  
+  .donate-button-up:focus,
+  .donate-arrow-up:hover {
+    fill: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+  }
+  
+
+  
+  @media screen and (min-width: 768px) {
+    .donate-container {
+      height: 474px;
+      width: 335px;
+
+    }
+  
+    .donate-header {
+      margin-bottom: 42px;
+    }
+  
+    .donate-funds-visible {
+      height: 292px;
+    }
+  
+  }
+  
+  @media screen and (min-width: 1440px) {
+    .donate-container {
+      width: 356px;
+    }
+  
+
+    .main-wrapper {
+      display: flex;
+    }
   }
 }

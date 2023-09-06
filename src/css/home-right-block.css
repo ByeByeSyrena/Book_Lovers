@@ -77,6 +77,9 @@
     gap: 32px;
     height: 472px;
     margin-bottom: 100px;
+    column-gap: 32px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -131,6 +134,7 @@
 /* .main-container {
   margin: 0 auto;
 }
+
 
 .donate-container {
   margin: 0 auto;
