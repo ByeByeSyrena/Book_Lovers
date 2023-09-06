@@ -7,6 +7,7 @@ const prevPage = document.querySelector('.prev-page');
 const firstPage = document.querySelector('.first-page');
 const lastPage = document.querySelector('.last-page');
 const numbersPage = document.querySelector('.numbers');
+const supportUa = document.querySelector('.shopping__list__support');
 
 pagination.addEventListener('click', onClick);
 numbersPage.addEventListener('click', onActiveBtn);
@@ -18,6 +19,12 @@ let pageNumber = 1;
 export function handleViewportResize() {
   const viewportWidth =
     window.innerWidth || document.documentElement.clientWidth;
+  if (viewportWidth < 1440) {
+    supportUa.style.display = 'none';
+  } else {
+    supportUa.style.display = 'flex';
+  }
+
   if (viewportWidth < 767) {
     perPage = 4;
   } else {
@@ -31,6 +38,7 @@ export function handleViewportResize() {
 
   if (pageNumber === 1) {
     const firstElement = numbersPage.firstElementChild;
+
     firstElement?.classList.add('active-page-pag');
   }
 
@@ -38,11 +46,13 @@ export function handleViewportResize() {
     const lastElement = numbersPage.lastElementChild;
     if (pageNumber > totalPages) {
       pageNumber -= 1;
+
       lastElement?.classList.add('active-page-pag');
+
       setMarkupBooks(perPage);
-      return
+      return;
     }
-    numbersPage.removeChild(lastElement)
+    numbersPage.removeChild(lastElement);
   }
 
   setMarkupBooks(perPage);
@@ -53,7 +63,9 @@ window.addEventListener('load', throttle(handleViewportResize, 500));
 
 export function setMarkupBooks(currentItem) {
   const startIndex = (pageNumber - 1) * currentItem;
+
   const endIndex = startIndex + currentItem;
+
   const visibleBooks = bookArray.slice(startIndex, endIndex);
 
   setMarkup(visibleBooks);
@@ -103,7 +115,9 @@ function onClick(evt) {
 
     if (pageNumber === textItem) {
       const currentActiveBtn = document.querySelector('.active-page-pag');
+
       currentActiveBtn?.classList.remove('active-page-pag');
+
       listButtonItem[textItem - 1].classList.add('active-page-pag');
     }
   });

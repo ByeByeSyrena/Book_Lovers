@@ -1,3 +1,12 @@
+.shopping__list__container{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shopping__list__support{
+ margin-top: 40px;
+}
 
 .shopping__list__first__title {
   color: var(--dark-theme-color);
@@ -21,7 +30,7 @@
   position: relative;
   display: flex;
   align-items: flex-start;
-  gap: 24px;
+  gap: 14px;
   flex-shrink: 0;
   border-radius: 16px;
   border: 2px solid var(--transparent-violet);
@@ -60,7 +69,6 @@
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.36px;
-  margin-bottom: 14px;
 }
 
 .shopping__list__description {
@@ -90,12 +98,10 @@
   display: flex;
   align-items: center;
   position: absolute;
+  background-color: rgba(255, 255, 255, 0.35);
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 4px rgba(255, 255, 255, 0.35);
 }
-
-/* .shopping__list__link__images:hover,
-.shopping__list__link__images:focus {
-  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
-} */
 
 .shopping__list__placeholder {
   margin-left: auto;
@@ -134,13 +140,23 @@
   }
 
   .shopping__list {
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
     padding-top: 40px;
   }
 
   .shopping__list__item {
-    min-width: 335px;
+    min-width: 305px;
     height: 170px;
     padding: 12px 12px;
+  }
+  .shopping__list__book__title {
+    max-width: 160px;
+  }
+
+  .shopping__list__category{
+    margin-bottom: 8px;
   }
 
   .shopping__list__book__image {
@@ -150,7 +166,7 @@
   }
 
   .shopping__list__author {
-    left: 138px;
+    left: 126px;
     bottom: 14px;
   }
 
@@ -187,8 +203,8 @@
 
   .shopping__list__placeholder {
     margin-top: 120px;
-    max-width: 266px;
-    max-height: 248px;
+    width: 266px;
+    height: 248px;
   }
 
   .shopping__list__placeholder__descriptions {
@@ -204,6 +220,11 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .shopping__list{
+    margin-left: auto;
+    margin-right: auto;
+    width: 768px;
+  }
   .shopping__list__first__title {
     font-size: 48px;
     line-height: 1.08;
@@ -219,11 +240,16 @@
     min-width: 335px;
     height: 214px;
     padding: 24px 24px;
+    gap: 24px;
   }
 
   .shopping__list__book__image {
     width: 116px;
     height: 165px;
+  }
+
+  .shopping__list__category{
+    margin-bottom: 14px;
   }
 
   .shopping__list__author {
@@ -264,8 +290,8 @@
 
   .shopping__list__placeholder {
     margin-top: 140px;
-    max-width: 350px;
-    max-height: 310px;
+    width: 350px;
+    height: 310px;
   }
 
   .shopping__list__placeholder__descriptions {
@@ -280,17 +306,14 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
   .shopping__list {
+    width: 996px;
     padding-left: 40px;
     padding-right: 24px;
   }
 
-  .shopping__list__list {
-    min-width: 996px;
-  }
 }
-
 
 /* !PAGINATION */
 .pagination {
@@ -380,7 +403,6 @@
     height: 44px;
   }
 }
-
 
 .active-page-pag {
   background-color: var(--dark-theme-color);
