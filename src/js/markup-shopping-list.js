@@ -125,19 +125,18 @@ const pagination = document.querySelector('.pagination');
 
 listMarkup.addEventListener('click', deleteCard);
 
-
 export function deleteCard(evt) {
-    evt.preventDefault();
-    if(!evt.target.id){
-        return
-    }
-    const bookIdDelete = evt.target.id;
-    const newArray = bookArray.filter(book => book.id !== bookIdDelete);
- 
-    localStorage.setItem(BOOKS_CARDS, JSON.stringify(newArray));
-    bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS))
-  
-    handleViewportResize()
+  evt.preventDefault();
+  if (!evt.target.id) {
+    return;
+  }
+  const bookIdDelete = evt.target.id;
+  const newArray = bookArray.filter(book => book.id !== bookIdDelete);
+
+  localStorage.setItem(BOOKS_CARDS, JSON.stringify(newArray));
+  bookArray = JSON.parse(localStorage.getItem(BOOKS_CARDS));
+
+  handleViewportResize();
 }
 
 export function setMarkup(array) {

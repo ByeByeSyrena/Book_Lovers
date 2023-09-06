@@ -31,14 +31,14 @@ export function handleViewportResize() {
 
   if (pageNumber === 1) {
     const firstElement = numbersPage.firstElementChild;
-    firstElement?.classList.add('active-page');
+    firstElement?.classList.add('active-page-pag');
   }
 
   if (numbersPage.children.length > totalPages || pageNumber > totalPages) {
     const lastElement = numbersPage.lastElementChild;
     if (pageNumber > totalPages) {
       pageNumber -= 1;
-      lastElement?.classList.add('active-page');
+      lastElement?.classList.add('active-page-pag');
       setMarkupBooks(perPage);
       return
     }
@@ -102,9 +102,9 @@ function onClick(evt) {
     const textItem = Number(item.textContent.trim());
 
     if (pageNumber === textItem) {
-      const currentActiveBtn = document.querySelector('.active-page');
-      currentActiveBtn?.classList.remove('active-page');
-      listButtonItem[textItem - 1].classList.add('active-page');
+      const currentActiveBtn = document.querySelector('.active-page-pag');
+      currentActiveBtn?.classList.remove('active-page-pag');
+      listButtonItem[textItem - 1].classList.add('active-page-pag');
     }
   });
 }
@@ -129,9 +129,9 @@ function onActiveBtn(evt) {
     return;
   }
 
-  const currentActiveBtn = document.querySelector('.active-page');
-  currentActiveBtn?.classList.remove('active-page');
+  const currentActiveBtn = document.querySelector('.active-page-pag');
+  currentActiveBtn?.classList.remove('active-page-pag');
 
   const nextActivBtn = evt.target;
-  nextActivBtn.classList.add('active-page');
+  nextActivBtn.classList.add('active-page-pag');
 }
