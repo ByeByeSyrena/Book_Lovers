@@ -53,3 +53,10 @@ color: var(--white-color);
     background-color: var(--dark-gray-color);
     color: var(--white-color);
 }
+.dark .burger-menu{
+    fill: var(--white-color);
+}
+.dark .header-cross{
+    fill: var(--white-color);
+}
+
