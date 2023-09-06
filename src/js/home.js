@@ -61,14 +61,14 @@ function getBestSellers() {
             bookItems.forEach(item => {
                 item.addEventListener("click", getBookCard);
             });
-        } else if (window.innerWidth >= 768 && window.innerWidth <= 1240) {
+        } else if (window.innerWidth >= 768 && window.innerWidth <= 1440) {
             bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
             
             const bookItems = document.querySelectorAll(".book-item");
             bookItems.forEach(item => {
                 item.addEventListener("click", getBookCard);
             });
-        } else if (window.innerWidth >= 1240) {
+        } else if (window.innerWidth > 1440) {
             bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
 
             const bookItems = document.querySelectorAll(".book-item");
