@@ -18,25 +18,57 @@
   <include src="./partials/header.html"></include>
   <include src="./partials/menu.html"></include>
   <main>
-    <!-- Header Support Ukraine -->
-    <!-- <div class="donate-container">
-      <div class="donate-header">
-        <span class="donate-paragraph">Support Ukraine</span>
-        <svg class="donate-emblem">
-          <use href="./images/icons.svg#emblem" width="20" height="32"></use>
-        </svg>
-      </div>
-      <div class="donate-funds-visible">
-        <ul class="donate-funds-list" id="donateFundsList"></ul>
-      </div> -->
+   
 
       <div class="container shopping__list__container">
+        <div class="home-page__support-ukraine-container shopping__list__support">
+          <!-- Header Support Ukraine -->
+          <div class="donate-container">
+            <div class="donate-header">
+              <span class="donate-paragraph">Support Ukraine</span>
+              <svg class="donate-emblem">
+                <use
+                  href="./images/icons.svg#emblem"
+                  width="20"
+                  height="32"
+                ></use>
+              </svg>
+            </div>
+            <div class="donate-funds-visible">
+              <ul class="donate-funds-list" id="donateFundsList"></ul>
+            </div>
+            <!-- Button down !-->
+            <div class="donate-block-arrow">
+              <button class="donate-button">
+                <svg class="donate-arrow">
+                  <use
+                    class="use-donate"
+                    href="./images/icons.svg#icon-donate"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+  
+            <!-- Button up -->
+            <div class="donate-block-arrow">
+              <button class="donate-button-up">
+                <svg class="donate-arrow-up">
+                  <use
+                    class="use-donate"
+                    href="./images/icons.svg#icon-donate"
+                  ></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div>
         <div class="shopping__list">
           <h2 class="shopping__list__first__title">
             Shopping <span class="shopping__list__second__title">List</span>
           </h2>
           <ul class="shopping__list__list js-markup-shopping__list"></ul>
-          <div class="shopping__list__placeholder js-placeholder">
+          <div class="shopping__list__placeholder js-placeholder" style="display: none;">
             <p class="shopping__list__placeholder__descriptions">
               This page is empty, add some books and proceed to order.
             </p>
@@ -46,7 +78,7 @@
               " src="./images/shopping-list/placeholder/IMG_9606.jpg" alt="tablet" width="320" height="240" />
           </div>
         </div>
-        <div class="pagination">
+        <div class="pagination" style="display: none;">
           <ul class="pagination-list">
             <li><button type="button" class="page-link page-item first-page" disabled>
               &lt;&lt;</button>
@@ -60,6 +92,7 @@
             <li><button type="button" class="page-link page-item last-page">&gt;&gt;</button></li>
           </ul>
         </div>
+        </div>
       </div>
       <!-- Scroll UP -->
       <button id="scrollUpButton">
@@ -68,10 +101,11 @@
         </svg></span>
       </button>
   </main>
-  <script type="module" src="./js/shopping-list.js"></script>
-  <script type="module" src="./js/theme-light-black.js"></script>
-  <script type="module" src="./js/header.js"></script>
   <script type="module" src="./js/scroll.js"></script>
+  <script type="module" src="./js/theme-light-black.js"></script>
+  <script type="module" src="./js/support-ua-block.js"></script>
+  <script type="module" src="./js/header.js"></script>
+  <script type="module" src="./js/shopping-list.js"></script>
 </body>
 
 </html>
