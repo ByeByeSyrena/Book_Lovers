@@ -174,23 +174,25 @@ header {
 
 }
 
-/* The switch - the box around the slider */
+/* The switch - the box around the slider
 .switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
-}
+  /* margin-left: auto;
+  display: flex; */
+/* } */
 
 /* Hide default HTML checkbox */
-.switch input {
+/* .switch input {
   opacity: 0;
   width: 0;
   height: 0; 
-}
+} */
 
 /* The slider */
-.switch .slider:before {
+/* .switch .slider:before {
   position: absolute;
   background:var(--white-color); 
  
@@ -201,10 +203,10 @@ header {
   bottom: 1px;
   -webkit-transition: 0.4s; 
   transition: 0.4s;
-}
+} */
 
-.switch .slider {
-  position: absolute;
+/* .switch .slider { */
+  /* position: absolute;
   cursor: pointer; 
   top: 0;
   left: 0;
@@ -215,28 +217,77 @@ header {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.10) inset;
-}
+} */
  
-.switch input:checked+.slider { 
+/* .switch input:checked+.slider { 
   background-color: rgb(50, 40, 93); 
      
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.10) inset; 
-}
+} */
 
-.switch input:checked+.slider:before  { 
+/* .switch input:checked+.slider:before  { 
   -webkit-transform: translateX(17px);
   -ms-transform: translateX(17px); 
   transform: translateX(17px);
 }
 
 /* Rounded sliders */
-.slider.round {
+/* .slider.round {
   border-radius: 34px;
-}
+} */
 
-.slider.round:before {
+/* .slider.round:before {
   border-radius: 50%;
-}
+} */ 
+
+.switch {
+  display: flex;
+  margin-left: auto;}
+  .switch input{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.10) inset;
+    background: rgb(117, 100, 190);
+    -webkit-transition: 0.4s; 
+   
+
+
+  }
+
+
+
+  .switch input:checked{
+
+    background-color: rgb(50, 40, 93); 
+     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.10) inset; 
+  }
+  .switch input:before {
+
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 20px;
+    top: 2;
+    left: 2;
+    transition: 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background:var(--white-color); 
+  }
+
+  .switch input:checked:before {
+    left: 22px;
+  }
+
+
 
 .header-user-part-div {
   position: relative;
@@ -244,7 +295,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 14px;
-}
+} 
 
 .user-log {
   display: none;
