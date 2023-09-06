@@ -53,32 +53,29 @@ body {
   font-family: var(--font);
 }
 
-@media screen and (min-width: 320px) {
 .container {
-  width: 100%;  
+  max-width: 375px;
   padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 335px) {
+  .container {
+    max-width: 335px;
+    padding: 0 15px;
   }
 }
 
-@media screen and (min-width: 375px) { 
+@media only screen and (min-width: 768px) {
   .container {
-    max-width: 333px;  
-    margin-left: auto; 
-    margin-right: auto;   
-
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 702px;
+    max-width: 768px;
     padding: 0 32px;
-  }
+  } 
 }
 
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   .container {
-    max-width: 1390px; 
+    max-width: 1440px; 
     padding: 0 24px;
   }
 }
