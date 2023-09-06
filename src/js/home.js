@@ -36,16 +36,28 @@ function onClickCategory(e) {
   activeLiEl.classList.add('active');
   bestSellersContainer.innerHTML = '';
 
-  if (nameCategory) {
-    mainTitleEl.innerHTML = nameCategory;
+    if (nameCategory) {
+        const wordEl = nameCategory.split(' ');
+        if (wordEl.length > 1) {
+            const lastEl = wordEl.pop();
+
+            wordEl.push(`<span style="color: #4F2EE8;">${lastEl}</span>`);
+        }
+
+        const coloredTitle = wordEl.join(' ');
+
+        mainTitleEl.innerHTML = coloredTitle;
+
     getCategoryData(nameCategory)
-      .then(booksData => {
-        booksData.map(book => markupByCategory(book));
-      })
-      .catch(error => console.log(error));
-  } else {
-    getBestSellers();
-  }
+       .then(booksData => {
+           booksData.map(book => markupByCategory(book))
+       })
+       .catch(error => console.log(error))
+
+   } else {
+       getBestSellers();
+  
+   }
 }
 
 function getBestSellers() {
@@ -53,56 +65,35 @@ function getBestSellers() {
     .then(booksData => {
       mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
 
-      if (window.innerWidth < 768) {
-        bestSellersContainer.innerHTML = markupTopBooks(booksData);
 
-        const bookItems = document.querySelectorAll('.book-item');
-        bookItems.forEach(item => {
-          item.addEventListener('click', getBookCard);
-        });
-      } else if (window.innerWidth >= 768 && window.innerWidth <= 1440) {
-        bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
-
-        const bookItems = document.querySelectorAll('.book-item');
-        bookItems.forEach(item => {
-          item.addEventListener('click', getBookCard);
-        });
-      } else if (window.innerWidth > 1440) {
-        bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
-
-        const bookItems = document.querySelectorAll('.book-item');
-        bookItems.forEach(item => {
-          item.addEventListener('click', getBookCard);
-        });
-      }
-
-      function getBookCard(event) {
-        const selectedBookElement = event.target.closest('.book-item');
-        if (selectedBookElement) {
-          const selectedBookId = selectedBookElement.dataset.id;
-          getIdData(selectedBookId)
-            .then(data => {
-              const modalMarkup = markupForOneBook(data);
-              const modalContainer = document.getElementById('modal-container');
-              modalContainer.innerHTML = modalMarkup;
-            })
-            .catch(error => console.log(error.message));
+        if (window.innerWidth <= 768) {
+            bestSellersContainer.innerHTML = markupTopBooks(booksData);
+        } else if (window.innerWidth > 768 && window.innerWidth < 1440) {
+            bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
+        } else if (window.innerWidth >= 1440) {
+            bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
         }
-      }
-    })
-    .catch(error => console.log(error));
+
+        const bookItems = document.querySelectorAll(".book-item");
+        bookItems.forEach(item => {
+            item.addEventListener("click", getBookCard);
+        });
+    }).catch(error => console.log(error));
 }
 
-// selector.addEventListener('click', showBookInfo);
+function getBookCard(event) {
+    const selectedBookElement = event.target.closest('.book-item');
+    if (selectedBookElement) {
+        const selectedBookId = selectedBookElement.dataset.id;
+        getIdData(selectedBookId)
+            .then(data => {
+                const modalMarkup = markupForOneBook(data);
+                const modalContainer = document.getElementById('modal-container');
+                modalContainer.innerHTML = modalMarkup;
+            })
+            .catch(error => console.log(error.message));
+    }
+}
 
-// function showBookInfo(event) {
-//   const bookItem = event.target.closest('.book-item');
-//   if (bookItem) {
-//     const bookId = bookItem.id;
-//     getIdData(bookId)
-//       .then(data => {
-//         markupForOneBook(data);
-//       })
-//       .catch(error => console.log(error.message));
-//   }
-// }
+getBestSellers();
+

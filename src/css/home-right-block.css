@@ -85,7 +85,7 @@
 @media only screen and (min-width: 1440px) {
   .left-container {
     width: 356px;
-    height: 800px;
+    height: 100%;
   }
 }
 
