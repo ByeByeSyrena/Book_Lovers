@@ -24,3 +24,9 @@ import getIdData from './fetch-one-book-info';
 // getIdData().then(content => {
 //   console.log(content);
 // });
+
+{
+  /* <svg class="yourorder-modal-icon-close" width="12" height="12">
+  <use href="./sprite.svg#icon-x"></use>
+</svg>; */
+}

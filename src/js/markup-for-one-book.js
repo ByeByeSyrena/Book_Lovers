@@ -1,35 +1,33 @@
 import getIdData from './fetch-one-book-info';
 // const iDBOOK = '';
 
-// (() => {
-//   const refs = {
-//     // openModalBtn: document.querySelector('.btn-book'),
-//     closeModalBtn: document.querySelector('[data-modal-pop-up-close]'),
-//     modal: document.querySelector('[data-modal-pop-up]'),
-//   };
-//   //   console.log(refs.openModalBtn);
-//   //   refs.openModalBtn.addEventListener('click', toggleModal);
+(() => {
+  const refs = {
+    closeModalBtn: document.querySelector('[data-modal-pop-up-close]'),
+    modal: document.querySelector('[data-modal-pop-up]'),
+  };
 
-//   refs.closeModalBtn.addEventListener('click', toggleModal);
-//   window.addEventListener('keydown', e => {
-//     if (e.key === 'Escape') {
-//       toggleModal();
-//     }
-//   });
-//   document
-//     .querySelector('.pop-up .pop-up-container')
-//     .addEventListener('click', event => {
-//       event._isClicWithInModal = true;
-//     });
-//   refs.modal.addEventListener('click', event => {
-//     if (event._isClicWithInModal) return;
-//     toggleModal();
-//   });
-//   function toggleModal() {
-//     refs.modal.classList.toggle('is-hidden');
-//   }
-// })();
+  //   refs.closeModalBtn.addEventListener('click', toggleModal);
+  //   window.addEventListener('keydown', e => {
+  //     if (e.key === 'Escape') {
+  //       toggleModal();
+  //     }
+  //   });
+  //   document
+  //     .querySelector('.pop-up .pop-up-container')
+  //     .addEventListener('click', event => {
+  //       event._isClicWithInModal = true;
+  //     });
+  //   refs.modal.addEventListener('click', event => {
+  //     if (event._isClicWithInModal) return;
+  //     toggleModal();
+  //   });
+  //   function toggleModal() {
+  //     refs.modal.classList.toggle('is-hidden');
+  //   }
+})();
 const items = JSON.parse(localStorage.getItem('bookCards')) || [];
+
 export default function markupForOneBook({
   _id,
   book_image,
@@ -55,6 +53,7 @@ export default function markupForOneBook({
   `
     )
     .join('');
+
   getIdData(_id).then(content => {
     const umper = document.querySelector('[pop-up-umper]');
     const localStorBtn = document.querySelector('.yourorder-modal-submit-btn');
@@ -111,9 +110,7 @@ export default function markupForOneBook({
           type="button"
           data-modal-pop-up-close
         >
-          <svg class="yourorder-modal-icon-close" width="12" height="12">
-            <use href="./sprite.svg#icon-x"></use>
-          </svg>
+          
         </button>
 
         <ul class="pop-up__list__list">
