@@ -75,6 +75,7 @@ function getBestSellers() {
             bookItems.forEach(item => {
                 item.addEventListener("click", getBookCard);
             });
+            
         }
 
 
@@ -90,7 +91,8 @@ function getBestSellers() {
                 const modalContainer = document.getElementById('modal-container');
                 modalContainer.innerHTML = modalMarkup;
 
-                //  const closeModalButton = document.getElementsByClassName("close-modal-button");
+                //  const closeModalButton = document.querySelector(".close-modal-button");
+                //  modalContainer.innerHTML = modalMarkup;
                 //  closeModalButton.addEventListener("click",function () {
                 //     modalContainer.innerHTML = "";
 
@@ -114,16 +116,3 @@ function getBestSellers() {
 
 
 
-// selector.addEventListener('click', showBookInfo);
-
-// function showBookInfo(event) {
-//   const bookItem = event.target.closest('.book-item');
-//   if (bookItem) {
-//     const bookId = bookItem.id;
-//     getIdData(bookId)
-//       .then(data => {
-//         markupForOneBook(data);
-//       })
-//       .catch(error => console.log(error.message));
-//   }
-// }

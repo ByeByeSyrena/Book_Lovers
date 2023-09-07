@@ -22,7 +22,6 @@ display: none;
   padding: 0;
   justify-content: center;
   align-items: center;
-  position: absolute;
   right: 12px;
   top: 12px;
   background-color: transparent;
@@ -33,14 +32,11 @@ button:hover svg {
   stroke: blue;
 }
 
+
+
 .modal-window {
-  /* position: absolute; */
+
   opacity: 1; 
-  /* width: 95%;
-  height: 95%; */
-  /* left: 0;
-  top: 0; */
-  /* transform: translate(-50%, -50%) scale(1); */
   background: white; 
   border: 2px solid  #111;
   border-radius: 20px;
@@ -122,10 +118,33 @@ button:hover svg {
     max-height: 85vh;
   }
 
+  .info-book-conteiner {
+    display: flex;
+    gap: 24px;
+
+    align-items: flex-start;
+  }
+
+  .image-block {
+    display: flex;
+    margin: 0;
+  }
+
+  .image-block img {
+    max-height: 281px;
+    width: 197px;
+    margin: 0;
+    margin-top: 0;
+  }
+
   .shop-list {
     margin-top: 20px;
     padding-bottom: 5px;
     max-width: 75%;
+  }
+
+  .descriptions{
+    margin-top: 20px;
   }
 
   .btn-local {
