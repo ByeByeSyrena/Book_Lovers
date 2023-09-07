@@ -51,6 +51,10 @@ function onClickCategory(e) {
     getCategoryData(nameCategory)
        .then(booksData => {
            booksData.map(book => markupByCategory(book))
+           const bookItems = document.querySelectorAll(".book-item");
+           bookItems.forEach(item => {
+               item.addEventListener("click", getBookCard);
+           });
        })
        .catch(error => console.log(error))
 
