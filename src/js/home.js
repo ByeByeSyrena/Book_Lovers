@@ -91,7 +91,15 @@ function getBookCard(event) {
                 modalContainer.innerHTML = modalMarkup;
 
                 const closeButton = modalContainer.querySelector(".btn-close");
+                const closeBackdrop = modalContainer.querySelector(".backdrop");
+
                 closeButton.addEventListener("click", removeBookCard);
+                closeBackdrop.addEventListener("click", removeBookCard);
+                window.addEventListener('keydown', e => {
+                if (e.key === 'Escape') {
+                removeBookCard();
+        }
+      });
             })
             .catch(error => console.log(error.message));
     }
