@@ -105,7 +105,10 @@ function getBookCard(event) {
     }
 }
 
-function removeBookCard() {
+function removeBookCard(event) {
+    if (!event.target.classList.contains("btn-close")) {
+        return;
+    }
     const modalContainer = document.getElementById('modal-container');
     modalContainer.innerHTML = "";
 }
