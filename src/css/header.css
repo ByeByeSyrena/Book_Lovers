@@ -191,7 +191,7 @@ header {
   }
 
   .user-log {
-    display: flex;
+    display: none;
     color: var(--white-color);
     font-size: 22px;
     font-weight: 700;
