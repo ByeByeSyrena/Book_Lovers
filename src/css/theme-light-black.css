@@ -14,14 +14,6 @@
 .dark .header-logo svg {
   fill: var(--white-bookshelf);
 }
-.dark .span-to-shopping-page {
-  color: var(--white-color);
-}
-
-.dark .home-span-btn {
-  color: var(--white-color);
-}
-
 .dark .basket svg {
   fill: var(--white-color);
 }
@@ -72,6 +64,7 @@
   border-radius: 2px;
   border-color: var(--white-color);
   border-radius: 10px;
+  fill: var(--white-color);
 }
 .dark .poup__list__book__title {
   color: var(--white-color);
@@ -81,10 +74,26 @@
 }
 .dark .yourorder-modal-submit-btn {
   background-color: var(--dark-gray-color);
+  color: var(--white-color);
 }
 .dark .yourorder-modal-close-btn {
   fill: var(--white-color);
 }
 .dark .span-btn {
+  color: var(--white-color);
+}
+.dark .heder_link--current{
+  color: var(--dark-theme-color);
+}
+.dark .li-to-shopping-page {
+  color: var(--white-color);
+}
+.dark .active-link-none {
+  color: var(--white-color);
+}
+.dark .popup__list__description {
+  color: var(--white-color);
+}
+.dark .umpertitle-pop {
   color: var(--white-color);
 }
