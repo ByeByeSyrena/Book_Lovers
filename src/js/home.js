@@ -122,7 +122,7 @@ function removeBookCard(event) {
 
     const modalContainer = document.getElementById('modal-container');
     modalContainer.innerHTML = "";
-}
+};
 
 getBestSellers();
 

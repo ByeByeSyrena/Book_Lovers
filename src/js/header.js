@@ -42,7 +42,7 @@ const shoppingLink = document.querySelector(".shopping-link");
 const activeLink = document.querySelector(".li-to-home-page")
 
  function current() {
-if(bodyEl.classList.contains('current')){
+if(bodyEl){
 
   shoppingLink.classList.add('heder_link--current');
   activeLink.classList.add('active-link-none');
