@@ -50,7 +50,41 @@ if(bodyEl.classList.contains('current')){
  };
  current();
 
- 
+// Header navigation - current location -- допрацьовую!!!
+function colorCurrentPage() {
+  const currentPageURL = window.location.href;
+
+  const homeLinkLi = document.querySelector(".li-to-home-page");
+  const shoppingListLinkLi = document.querySelector(".li-to-shopping-page");
+
+
+  const homeLinkMobile = document.querySelector(".mobile-menu-home-button");
+  const shoppingLinkMobile = document.querySelector(".mobile-menu-shopping-list");
+
+  const body = document.body;
+
+  if (currentPageURL.includes("index.html")) {
+    homeLinkLi.classList.add("change-background");
+    homeLinkMobile.classList.add("change-background");
+
+    shoppingListLinkLi.classList.remove("change-background");
+    // shoppingLinkMobile.classList.remove("change-background");
+
+  } else if (currentPageURL.includes("shopping-list.html")) {
+    shoppingListLinkLi.classList.add("change-background");
+    // shoppingLinkMobile.classList.add("change-background");
+
+    homeLinkLi.classList.remove("change-background");
+    // homeLinkMobile.classList.remove("change-background");
+  }
+}
+
+colorCurrentPage();
+
+
+
+
+
  
 
  
