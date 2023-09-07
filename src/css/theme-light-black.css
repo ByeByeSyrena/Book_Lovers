@@ -82,7 +82,7 @@
 .dark .span-btn {
   color: var(--white-color);
 }
-.dark .heder_link--current{
+.dark .heder_link--current {
   color: var(--dark-theme-color);
 }
 .dark .li-to-shopping-page {
@@ -96,4 +96,7 @@
 }
 .dark .umpertitle-pop {
   color: var(--white-color);
+}
+.dark .book-categories {
+  background: var(--dark-gray-color);
 }
