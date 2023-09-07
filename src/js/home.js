@@ -66,9 +66,9 @@ function getBestSellers() {
       mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
 
 
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth < 768) {
             bestSellersContainer.innerHTML = markupTopBooks(booksData);
-        } else if (window.innerWidth > 768 && window.innerWidth < 1440) {
+        } else if (window.innerWidth >= 768 && window.innerWidth < 1440) {
             bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
         } else if (window.innerWidth >= 1440) {
             bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
