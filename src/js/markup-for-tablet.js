@@ -4,7 +4,7 @@ export default function markupForTabletOfTopBooks(smallArrayOfTopCategories = []
     return `
       <div class="category-data">
         <h2 class="name-category" data-name="${list_name}">${list_name}</h2>
-        <br>
+  
         <div class="book-item-wrap">
             ${innerMarkupOfTabletBestSellers(books)}
         </div>

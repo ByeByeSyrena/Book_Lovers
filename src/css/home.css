@@ -68,6 +68,7 @@
 @media only screen and (min-width: 768px) {
   .right-container {
     display: block;
+    padding-left: 40px;
   }
 
   .justify-books {
@@ -204,7 +205,7 @@
     position: relative;
     bottom: 0;
     right: 0;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
   }
 }
 
@@ -235,6 +236,7 @@
   line-height: 18px;
   letter-spacing: -0.14px;
   text-transform: uppercase;
+  margin-top: 32px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1440px) {
@@ -260,6 +262,7 @@
   .book-item-wrap {
     display: flex;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 24px;
+    align-items: flex-start;
   }
 }
