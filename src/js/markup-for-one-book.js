@@ -106,7 +106,6 @@ export default function markupForOneBook({
           type="button"
           data-modal-pop-up-close
         >
-          
         </button>
 
         <ul class="pop-up__list__list">
@@ -120,7 +119,7 @@ export default function markupForOneBook({
                   <h3 class="poup__list__book__title" data-name="${title}">${title}</h3>
                   <p class="popup__list__author" data-name="${author}">${author}</p>
                   <p class="popup__list__description" data-name="${description}">${description}</p>
-<ul class="">
+<ul class="links-to-shops">
                          ${buyLinksHTML}
                     </ul>
 

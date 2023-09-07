@@ -160,6 +160,7 @@ header {
     letter-spacing: -0.56px;
     text-transform: uppercase;
     border-radius: 36px;
+    background-color: var(--yellow-color);
   }
 
   .li-to-shopping-page {
