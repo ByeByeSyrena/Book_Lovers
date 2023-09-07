@@ -73,7 +73,6 @@ export default function markupForOneBook({
     )
     .join('');
 
-  console.log(_id);
   return `
         <div class="backdrop ">
             <div class="modal-window">

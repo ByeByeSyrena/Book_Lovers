@@ -159,15 +159,14 @@ function getChosenCategory(event) {
 
         getCategoryData(nameCategory)
             .then(booksData => {
+                bestSellersContainer.innerHTML = "";
                 booksData.map(book => markupByCategory(book));
+                
+                const bookItems = document.querySelectorAll(".book-item");
+                bookItems.forEach(item => {
+                    item.addEventListener("click", getBookCard);
+                });
             })
             .catch(error => console.log(error));
-
-        bestSellersContainer.innerHTML = getCategoryData(nameCategory);
-        
-        const bookItems = document.querySelectorAll(".book-item");
-        bookItems.forEach(item => {
-            item.addEventListener("click", getBookCard);
-        });
     }
 }
