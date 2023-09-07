@@ -56,7 +56,7 @@ export function creatMarkup(books) {
           <h3 class="shopping__list__book__title">${title ? title : "Sorry no title"}</h3>
           <p class="shopping__list__category">${list_name ? list_name : "Sorry no category"}</p>
           <p class="shopping__list__description">${description ? description : "Sorry no description"}</p>
-          <p class="shopping__list__author">${author ? author : "Sorry no author"}</p>
+          <p class="shopping__list__author">${author}</p>
         </div>
         <ul class="shopping__list__link__list">
         <li class="shopping__list__link__item">

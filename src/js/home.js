@@ -104,11 +104,10 @@ function getBookCard(event) {
                 const closeBackdrop = modalContainer.querySelector(".backdrop");
 
                 closeButton.addEventListener("click", removeBookCard);
-                closeBackdrop.addEventListener("click", removeBookCard);
                 window.addEventListener('keydown', e => {
                 if (e.key === 'Escape') {
                 removeBookCard();
-        }
+        } 
       });
             })
             .catch(error => console.log(error.message));
@@ -116,9 +115,11 @@ function getBookCard(event) {
 }
 
 function removeBookCard(event) {
+    const modalWindow = document.getElementById('modal-container');
     if (!event.target.classList.contains("btn-close")) {
         return;
     }
+
     const modalContainer = document.getElementById('modal-container');
     modalContainer.innerHTML = "";
 }
@@ -153,7 +154,7 @@ function getChosenCategory(event) {
 
             const coloredTitle = wordEl.join(' ');
 
-            mainTitleEl.innerHTML = `Best Sellers <span class="colored">Books</span> - ${coloredTitle}`;
+            mainTitleEl.innerHTML = `${coloredTitle}`;
         }
 
         getCategoryData(nameCategory)

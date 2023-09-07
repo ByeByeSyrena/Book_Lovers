@@ -1,5 +1,4 @@
 import getIdData from './fetch-one-book-info';
-// const iDBOOK = '';
 
 (() => {
   const refs = {
@@ -7,24 +6,7 @@ import getIdData from './fetch-one-book-info';
     modal: document.querySelector('[data-modal-pop-up]'),
   };
 
-  //   refs.closeModalBtn.addEventListener('click', toggleModal);
-  //   window.addEventListener('keydown', e => {
-  //     if (e.key === 'Escape') {
-  //       toggleModal();
-  //     }
-  //   });
-  //   document
-  //     .querySelector('.pop-up .pop-up-container')
-  //     .addEventListener('click', event => {
-  //       event._isClicWithInModal = true;
-  //     });
-  //   refs.modal.addEventListener('click', event => {
-  //     if (event._isClicWithInModal) return;
-  //     toggleModal();
-  //   });
-  //   function toggleModal() {
-  //     refs.modal.classList.toggle('is-hidden');
-  //   }
+
 })();
 const items = JSON.parse(localStorage.getItem('bookCards')) || [];
 
@@ -65,7 +47,6 @@ export default function markupForOneBook({
  
 
       if (items.find(option => option._id === content._id)) {
-        console.log(1);
         status = 'add';
         localStorBtn.textContent = ' add to shopping list';
 
@@ -83,7 +64,6 @@ export default function markupForOneBook({
         localStorage.setItem('bookCards', JSON.stringify(items));
         return;
       } else {
-        console.log(2);
         localStorBtn.textContent = ' add to shopping list';
         umper.classList.remove('is-hidden');
         localStorBtn.textContent = 'remove from the shopping list';
@@ -93,13 +73,11 @@ export default function markupForOneBook({
         return;
       }
     }
-    console.log(content);
   });
     
     
-  console.log(_id);
   return `
-        <div class="backdrop ">
+        <div class="backdrop">
             <div class="modal-window">
             <button
           class="yourorder-modal-close-btn btn btn-close"

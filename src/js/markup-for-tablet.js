@@ -13,7 +13,6 @@ export default function markupForTabletOfTopBooks(smallArrayOfTopCategories = []
     `;
   });
 
-  console.log(renderTabletMarkupOfBest);
   return renderTabletMarkupOfBest.join('');
 }
 

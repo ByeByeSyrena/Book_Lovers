@@ -12,7 +12,6 @@ export default function markupForDesktopOfTopBooks(smallArrayOfTopCategories = [
     `
   });
 
-  // console.log(renderDesktopMarkupOfBest)
   return renderDesktopMarkupOfBest.join('')
 }
 
