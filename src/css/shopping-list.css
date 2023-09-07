@@ -61,7 +61,6 @@
 .shopping__list__book__title {
   color: var(--dark-theme-color);
   font-family: DM Sans;
-  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.12;
@@ -73,7 +72,6 @@
 .shopping__list__category {
   color: var(--light-gray-color);
   font-family: DM Sans;
-  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.17;
@@ -83,7 +81,6 @@
 .shopping__list__description {
   color: var(--dark-theme-color);
   font-family: DM Sans;
-  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 1.29;
@@ -93,7 +90,6 @@
 .shopping__list__author {
   color: var(--light-gray-color);
   font-family: DM Sans;
-  font-size: 12px;
   font-style: italic;
   font-weight: 400;
   line-height: 1.17;
@@ -135,18 +131,7 @@
 }
 
 
-@media screen and (min-width: 320px), screen and (max-width: 560px) {
-  .shopping__list__description {
-    height: 38px;
-    overflow: hidden;
-  }
-
-  .shopping__list__author {
-    width: 90px;
-  }
-}
-
-@media screen and (min-width: 346px), screen and (max-width: 767px) {
+@media only screen and (min-width: 320px) {
   .shopping__list__container {
     padding: 0 5px;
   }
@@ -169,22 +154,33 @@
     padding: 12px 12px;
   }
   
-  .shopping__list__book__title {
-    max-width: 140px;
-  }
-
-  .shopping__list__category{
-    margin-bottom: 8px;
-  }
-
   .shopping__list__book__image {
     width: 100px;
     height: 142px;
     border-radius: 8px;
   }
 
+  .shopping__list__book__title {
+    max-width: 140px;
+    font-size: 14px;
+  }
+
+  .shopping__list__category{
+    max-width: 150px;
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .shopping__list__description {
+    font-size: 12px;
+    height: 42px;
+    overflow: hidden;
+  }
+
   .shopping__list__author {
-    left: 120px;
+    font-size: 10px;
+    width: 80px;
+    left: 128px;
     bottom: 14px;
   }
 
@@ -199,10 +195,6 @@
     right: 14px;
     bottom: 14px;
     gap: 8px;
-  }
-
-  .shopping__list__description {
-    min-height: 30px;
   }
 
   .shopping__list__link__images {
@@ -235,6 +227,29 @@
     max-width: 266px;
     max-height: 198px;
   }
+
+}
+
+
+@media screen and (min-width: 346px) {
+  .shopping__list__book__title {
+    max-width: 160px;
+  font-size: 16px;
+  }
+
+  .shopping__list__category {
+    font-size: 12px;
+  }
+
+  .shopping__list__description {
+    height: 38px;
+    font-size: 14px;
+  }
+  .shopping__list__author {
+    width: 90px;
+    font-size: 12px;
+  }
+
 }
 
 
@@ -277,6 +292,7 @@
   }
 
   .shopping__list__category{
+    max-width: 400px;
     margin-bottom: 14px;
   }
 
