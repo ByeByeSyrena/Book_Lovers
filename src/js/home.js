@@ -77,6 +77,11 @@ function getBestSellers() {
             bookItems.forEach(item => {
                 item.addEventListener("click", getBookCard);
             });
+
+            const seeMoreButton = document.querySelectorAll(".see-more-button-container");
+            seeMoreButton.forEach(item => {
+                item.addEventListener("click", getChosenCategory);
+            });
         }).catch(error => console.log(error));
 }
 
@@ -116,4 +121,42 @@ function removeBookCard(event) {
 getBestSellers();
 
 
+getAllCategories()
+  .then(allCategories => {
+    allCategories.map(categoryName => markupCategoryList(categoryName));
+    listEl = document.querySelectorAll('.item-category');
+  })
+  .catch(() => Notify.failure('Sorry, please reload the page'));
 
+listCategories.addEventListener('click', onClickCategory);
+
+getBestSellers();
+
+
+
+function getChosenCategory(event) {
+    const container = event.target.closest('.see-more-button-container');
+    if (container) {
+        const nameCategory = container.dataset.category;
+
+        if (nameCategory) {
+            const wordEl = nameCategory.split(' ');
+            if (wordEl.length > 1) {
+                const lastEl = wordEl.pop();
+                wordEl.push(`<span style="color: #4F2EE8;">${lastEl}</span>`);
+            }
+
+            const coloredTitle = wordEl.join(' ');
+
+            mainTitleEl.innerHTML = `Best Sellers <span class="colored">Books</span> - ${coloredTitle}`;
+        }
+
+        getCategoryData(nameCategory)
+            .then(booksData => {
+                booksData.map(book => markupByCategory(book));
+            })
+            .catch(error => console.log(error));
+
+        bestSellersContainer.innerHTML = getCategoryData(nameCategory);
+    }
+}

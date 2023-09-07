@@ -8,7 +8,7 @@ export default function markupTopBooks(ArrayOfTopCategories = []) {
                     <img class="best-books-img" src="${book_image}" alt="${title}">
                     <h3 class="book-title" data-name="${title}">${title}</h3>
                     <p class="author-bestsellers" data-name="${author}">${author}</p>
-                    <div class="see-more-button-container"><button type="button" class="see-more-button">SEE MORE</button></div>
+                    <div class="see-more-button-container" data-category="${list_name}"><button type="button" class="see-more-button">SEE MORE</button></div>
                 </div>
             `;
         }).join('');
