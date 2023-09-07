@@ -82,9 +82,6 @@
   }
 
   .mobile-menu-bucket {
-    position: absolute;
-    right: 0%;
-    top: 15%;
     fill: var(--white-color);
     width: 20px;
     height: 20px;
@@ -129,18 +126,24 @@
 
   .mobile-menu-shopping-list {
     display: flex;
-    flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
+    gap: 4px;
     width: 156px;
     height: 34px;
-    color: #111;
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
     letter-spacing: -0.56px;
     text-transform: uppercase;
     border-radius: 36px;
+  }
+  .home-span-btn {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
   }
 
   .background-element {

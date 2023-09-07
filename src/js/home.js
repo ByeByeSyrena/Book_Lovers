@@ -94,10 +94,31 @@ function getBookCard(event) {
                 const modalMarkup = markupForOneBook(data);
                 const modalContainer = document.getElementById('modal-container');
                 modalContainer.innerHTML = modalMarkup;
+
+                const closeButton = modalContainer.querySelector(".btn-close");
+                const closeBackdrop = modalContainer.querySelector(".backdrop");
+
+                closeButton.addEventListener("click", removeBookCard);
+                closeBackdrop.addEventListener("click", removeBookCard);
+                window.addEventListener('keydown', e => {
+                if (e.key === 'Escape') {
+                removeBookCard();
+        }
+      });
             })
             .catch(error => console.log(error.message));
     }
 }
 
+function removeBookCard(event) {
+    if (!event.target.classList.contains("btn-close")) {
+        return;
+    }
+    const modalContainer = document.getElementById('modal-container');
+    modalContainer.innerHTML = "";
+}
+
 getBestSellers();
+
+
 

@@ -124,15 +124,24 @@
 
 .yourorder-modal-close-btn {
   position: absolute;
+  z-index: 1010;
   top: 12px;
   right: 12px;
   width: 24px;
   height: 24px;
   padding: 0;
   border: none;
-  background: none;
-  fill: #000000;
+  background: url(../images/cross-svgrepo-com.svg), no-repeat;
+  background-size: contain;
 }
+
+.links-to-shops {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
 @media screen and (min-width: 768px) {
   .yourorder-modal-close-btn {
     top: 24px;
