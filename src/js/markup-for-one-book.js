@@ -54,7 +54,6 @@ export default function markupForOneBook({
         return;
       }
     }
-    console.log(content);
   });
 
   const buyLinks = buy_links || [];
