@@ -229,6 +229,14 @@ header {
     align-items: center;
   }
 }
+.heder_link--current{
+  background: var(--yellow-color);
+  border-radius: 36px;
+  align-items: flex-start;
+  padding: 8px 16px;
+}
+.active-link-none{
+  background: none;
 
 @media only screen and (min-width: 1440px) {
   .header-main-div {
