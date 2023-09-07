@@ -102,7 +102,7 @@ export default function markupForOneBook({
         <div class="backdrop ">
             <div class="modal-window">
             <button
-          class="yourorder-modal-close-btn btn"
+          class="yourorder-modal-close-btn btn btn-close"
           type="button"
           data-modal-pop-up-close
         >
