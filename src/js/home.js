@@ -51,6 +51,10 @@ function onClickCategory(e) {
     getCategoryData(nameCategory)
        .then(booksData => {
            booksData.map(book => markupByCategory(book))
+           const bookItems = document.querySelectorAll(".book-item");
+           bookItems.forEach(item => {
+               item.addEventListener("click", getBookCard);
+           });
        })
        .catch(error => console.log(error))
 
@@ -61,23 +65,24 @@ function onClickCategory(e) {
 }
 
 function getBestSellers() {
-    getTopBooks()
-        .then(booksData => {
-            mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
+  getTopBooks()
+    .then(booksData => {
+      mainTitleEl.innerHTML = 'Best Sellers <span class="colored">Books</span>';
 
-            if (window.innerWidth <= 768) {
-                bestSellersContainer.innerHTML = markupTopBooks(booksData);
-            } else if (window.innerWidth > 768 && window.innerWidth < 1440) {
-                bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
-            } else if (window.innerWidth >= 1440) {
-                bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
-            }
 
-            const bookItems = document.querySelectorAll(".book-item");
-            bookItems.forEach(item => {
-                item.addEventListener("click", getBookCard);
-            });
-        }).catch(error => console.log(error));
+        if (window.innerWidth < 768) {
+            bestSellersContainer.innerHTML = markupTopBooks(booksData);
+        } else if (window.innerWidth >= 768 && window.innerWidth < 1440) {
+            bestSellersContainer.innerHTML = markupForTabletOfTopBooks(booksData);
+        } else if (window.innerWidth >= 1440) {
+            bestSellersContainer.innerHTML = markupForDesktopOfTopBooks(booksData);
+        }
+
+        const bookItems = document.querySelectorAll(".book-item");
+        bookItems.forEach(item => {
+            item.addEventListener("click", getBookCard);
+        });
+    }).catch(error => console.log(error));
 }
 
 function getBookCard(event) {
