@@ -1,13 +1,5 @@
 import getIdData from './fetch-one-book-info';
 
-(() => {
-  const refs = {
-    closeModalBtn: document.querySelector('[data-modal-pop-up-close]'),
-    modal: document.querySelector('[data-modal-pop-up]'),
-  };
-
-
-})();
 const items = JSON.parse(localStorage.getItem('bookCards')) || [];
 
 export default function markupForOneBook({
@@ -18,8 +10,54 @@ export default function markupForOneBook({
   description,
   title,
 }) {
+  getIdData(_id).then(content => {
+    const umper = document.querySelector('[pop-up-umper]');
+    const localStorBtn = document.querySelector('.yourorder-modal-submit-btn');
 
-    const buyLinks = buy_links || [];
+    if (items.find(option => option._id === content._id)) {
+      localStorBtn.textContent = 'remove from the shopping list';
+      umper.classList.remove('is-hidden');
+    } else {
+      umper.classList.add('is-hidden');
+
+      localStorBtn.textContent = ' add to shopping list';
+    }
+  });
+
+  getIdData(_id).then(content => {
+    const umper = document.querySelector('[pop-up-umper]');
+    const localStorBtn = document.querySelector('.yourorder-modal-submit-btn');
+    localStorBtn.addEventListener('click', localStorageChange);
+
+    function localStorageChange() {
+      if (items.find(option => option._id === content._id)) {
+        localStorBtn.textContent = ' add to shopping list';
+
+        umper.classList.add('is-hidden');
+        const deletable = content._id;
+
+        for (let i = 0, len = items.length; i < len; i++) {
+          if (items[i]._id === deletable) {
+            items.splice(i, 1);
+            break;
+          }
+        }
+
+        localStorage.setItem('bookCards', JSON.stringify(items));
+        return;
+      } else {
+        umper.classList.remove('is-hidden');
+        localStorBtn.textContent = 'remove from the shopping list';
+        items.push(content);
+        localStorage.setItem('bookCards', JSON.stringify(items));
+
+        return;
+      }
+    }
+    console.log(content);
+  });
+
+  const buyLinks = buy_links || [];
   const sliceArray = buyLinks.slice(0, 3);
 
   const buyLinksHTML = sliceArray
@@ -36,48 +74,9 @@ export default function markupForOneBook({
     )
     .join('');
 
-  getIdData(_id).then(content => {
-    const umper = document.querySelector('[pop-up-umper]');
-    const localStorBtn = document.querySelector('.yourorder-modal-submit-btn');
-    localStorBtn.addEventListener('click', localStorageChange);
-
-    let status = 'add';
-
-    function localStorageChange() {
- 
-
-      if (items.find(option => option._id === content._id)) {
-        status = 'add';
-        localStorBtn.textContent = ' add to shopping list';
-
-        umper.classList.add('is-hidden');
-
-        const deletable = content._id;
-
-        for (let i = 0, len = items.length; i < len; i++) {
-          if (items[i]._id === deletable) {
-            items.splice(i, 1);
-            break;
-          }
-        }
-
-        localStorage.setItem('bookCards', JSON.stringify(items));
-        return;
-      } else {
-        localStorBtn.textContent = ' add to shopping list';
-        umper.classList.remove('is-hidden');
-        localStorBtn.textContent = 'remove from the shopping list';
-        items.push(content);
-        localStorage.setItem('bookCards', JSON.stringify(items));
-
-        return;
-      }
-    }
-  });
-    
-    
+  console.log(_id);
   return `
-        <div class="backdrop">
+        <div class="backdrop ">
             <div class="modal-window">
             <button
           class="yourorder-modal-close-btn btn btn-close"
@@ -106,7 +105,7 @@ export default function markupForOneBook({
               </li>
           <li class="box-modal-btn">
             <button class="yourorder-modal-submit-btn" type="button">
-              Add to shopping list
+              
             </button>
             <div class="umper-form is-hidden" pop-up-umper>
               <p class="umpertitle-pop">
@@ -123,7 +122,7 @@ export default function markupForOneBook({
 
 function getLinkImageSource(linkName) {
   const linkImageMappings = {
-    "Amazon": require('../images/shopping-list/link-svg/image1.svg'),
+    Amazon: require('../images/shopping-list/link-svg/image1.svg'),
     'Apple Books': require('../images/shopping-list/link-svg/image2.svg'),
     'Barnes and Noble': require('../images/shopping-list/link-svg/image3.svg'),
   };
