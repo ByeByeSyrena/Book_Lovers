@@ -164,5 +164,10 @@ function getChosenCategory(event) {
             .catch(error => console.log(error));
 
         bestSellersContainer.innerHTML = getCategoryData(nameCategory);
+        
+        const bookItems = document.querySelectorAll(".book-item");
+        bookItems.forEach(item => {
+            item.addEventListener("click", getBookCard);
+        });
     }
 }
