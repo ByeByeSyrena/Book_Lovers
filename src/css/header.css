@@ -191,7 +191,6 @@ header {
 
   .user-log {
     display: flex;
-    padding: 4px 12px;
     color: var(--white-color);
     font-size: 22px;
     font-weight: 700;
@@ -244,5 +243,8 @@ header {
 
 .change-background {
   background-color: var(--yellow-color);
+}
+
+.change-font-color {
   color: var(--black-color);
 }
