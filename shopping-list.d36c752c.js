@@ -1,0 +1,2 @@
+function e(){try{"dark"===localStorage.getItem("theme")?document.querySelector("body").classList.add("dark"):document.querySelector("body").classList.remove("dark")}catch(e){}}document.querySelector(".toggle").addEventListener("click",(function(t){"dark"===localStorage.getItem("theme")?localStorage.removeItem("theme"):localStorage.setItem("theme","dark");e()})),e();
+//# sourceMappingURL=shopping-list.d36c752c.js.map
